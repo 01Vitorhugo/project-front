@@ -13,7 +13,8 @@
     align-items: center;
     padding-left: 18px;
 }
-.icon-menu button{
+
+.icon-menu button {
     background-color: transparent;
     cursor: pointer;
 }
@@ -34,7 +35,7 @@
 
 
 
-.info{
+.info {
     height: 292px;
     width: 100%;
     position: fixed;
@@ -43,27 +44,30 @@
     cursor: pointer;
     background: rgba(255, 255, 255, 0.75);
 }
-.info .info-nav{
-    
+
+.info .info-nav {
+
     height: 83px;
     width: 100%;
     display: flex;
-    
+
 }
-.info-nav .logo-nav{
+
+.info-nav .logo-nav {
     height: 100%;
     width: 50%;
     display: flex;
     justify-content: right;
     align-items: center;
 }
+
 .logo-nav img {
     width: 99px;
     height: 108px;
     flex-shrink: 0;
 }
-   
-.info .icon-nav{
+
+.info .icon-nav {
     height: 100%;
     width: 50%;
     display: flex;
@@ -73,9 +77,37 @@
 
 }
 
-.info .topics{
+.info .topics {
     width: 100%;
     height: 200px;
-    background-color: black;
+    color: #0073CF;
+    padding: 18px;
+
+
 }
 
+.topics ul {
+    height: 130px;
+
+}
+
+.topics ul li {
+    list-style: none;
+    padding: 6px 0;
+}
+
+.topics .login {
+    /* background-color: aqua; */
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login button {
+    width: 116px;
+    height: 37px;
+    border-radius: 20px;
+    background: #0073CF;
+    color: #fff;
+}

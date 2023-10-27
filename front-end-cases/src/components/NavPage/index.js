@@ -53,6 +53,10 @@ function NavPage() {
                                 <li>Cabos</li>
                                 <li>Película</li>
                             </ul>
+                            <div className='login'>
+                                <button>Login</button>
+
+                            </div>
 
                         </div>
                     </div>
