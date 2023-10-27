@@ -1,0 +1,51 @@
+.home {
+    height: auto;
+    width: 100%;
+    margin-top: 27px;
+}
+
+.home .banner-home {
+    height: 180px;
+    width: 100%;
+}
+
+.banner-home img {
+    height: 100%;
+    width: 100%;
+}
+
+.home .link-whats {
+    width: 360px;
+    height: 97px;
+    background: rgba(190, 21, 34, 0.75);
+    margin-top: 34px;
+    display: flex;
+    color: #fff;
+}
+
+.link-whats .logo-whats {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-whats .info-whats {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-whats h1 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.info-whats p{
+    font-size: 12px;
+    margin-top: 4px;
+}
