@@ -1,0 +1,81 @@
+.nav {
+    background: rgba(255, 255, 255, 0.75);
+    height: 83px;
+    width: 100%;
+    display: flex;
+}
+
+.nav .icon-menu {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 18px;
+}
+.icon-menu button{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav .logo-menu {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.logo-menu img {
+    width: 99px;
+    height: 108px;
+    flex-shrink: 0;
+}
+
+
+
+.info{
+    height: 292px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.75);
+}
+.info .info-nav{
+    
+    height: 83px;
+    width: 100%;
+    display: flex;
+    
+}
+.info-nav .logo-nav{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.logo-nav img {
+    width: 99px;
+    height: 108px;
+    flex-shrink: 0;
+}
+   
+.info .icon-nav{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 18px;
+
+}
+
+.info .topics{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+
