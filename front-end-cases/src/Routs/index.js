@@ -2,6 +2,7 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom"
 import HomePage from "../components/Home";
 import NavPage from "../components/NavPage";
+import PageLogin from "../components/Login";
 
 function RoutsPage(){
 
@@ -11,7 +12,7 @@ function RoutsPage(){
 
             <Routes>
                 <Route  path="/" element={ <HomePage/> }/>
-
+                <Route  path="/login" element={ <PageLogin/> }/>
             </Routes>
 
        </BrowserRouter>

@@ -1,5 +1,5 @@
 .nav {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.961);
     height: 83px;
     width: 100%;
     display: flex;
@@ -17,6 +17,11 @@
 .icon-menu button {
     background-color: transparent;
     cursor: pointer;
+}
+button a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 .nav .logo-menu {
@@ -42,7 +47,7 @@
     left: 0;
     top: 0;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.961);
 }
 
 .info .info-nav {
@@ -94,14 +99,16 @@
 .topics ul li {
     list-style: none;
     padding: 6px 0;
+    font-size: 20px;
 }
 
 .topics .login {
-    /* background-color: aqua; */
-    height: 30px;
+     /* background-color: aqua;  */
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
 }
 
 .login button {

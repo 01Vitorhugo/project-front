@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import './nav.css';
+import { Link } from 'react-router-dom';
 
 
 function NavPage() {
 
     const [nav, setNav] = useState(false);
-
-
 
     function NavInfo() {
         setNav(true);
@@ -16,7 +15,9 @@ function NavPage() {
         setNav(false);
     }
 
-    // console.log(nav);
+    // function Logar(){
+    //     setNav(false);
+    // }
 
     return (
         <div className="nav">
@@ -41,7 +42,7 @@ function NavPage() {
                             </div>
 
                             <div className='logo-nav'>
-                                <img src={require('../../Imagens/logo.png')} alt='logo' />
+                            <button onClick={VoltaNav}> <Link to='/'><img src={require('../../Imagens/logo.png')} alt='logo' /></Link></button>
                             </div>
 
                         </div>
@@ -54,7 +55,7 @@ function NavPage() {
                                 <li>Película</li>
                             </ul>
                             <div className='login'>
-                                <button>Login</button>
+                                <button onClick={VoltaNav}><Link to='/login'>Login</Link></button>
 
                             </div>
 
@@ -65,7 +66,7 @@ function NavPage() {
             </div>
 
             <div className='logo-menu'>
-                <img src={require('../../Imagens/logo.png')} alt='logo' />
+            <Link to='/'><img src={require('../../Imagens/logo.png')} alt='logo'/></Link>
             </div>
 
         </div>
