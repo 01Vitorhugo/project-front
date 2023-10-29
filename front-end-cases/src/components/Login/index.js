@@ -1,14 +1,37 @@
 import { useState } from 'react';
 import './login.css';
 import { Link } from 'react-router-dom';
+import { auth } from '../../BD-login';
 
-function PageLogin() {
+import { signInWithEmailAndPassword } from "firebase/auth"
+
+function PageLogin( ) {
+
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
+    // const [log, setLog] = useState(false);
 
-    function Logar(){
-        alert(`Email: ${email} \n Senha: ${senha}`);
+    async function Logar() {
+        await signInWithEmailAndPassword(auth, email, senha)
+            .then(() => {
+                setEmail('');
+                setSenha('');
+                alert('Logado com sucesso');
+                // setLog(true);
+            })
+            .catch(() => {
+                alert('Erro ao logar')
+            })
+
     }
+
+    // //Deslogando do sistema
+    // async function logof() {
+    //     await signOut(auth)
+    //     setLog(false);
+
+
+    // }
 
     return (
         <div className="login">
@@ -33,7 +56,9 @@ function PageLogin() {
                 />
 
                 <button className="button-logar" onClick={Logar}>Entrar</button>
-                <p>Não tem conta? <strong><Link to="/">Cadastra-se</Link></strong></p>
+
+
+                <p>Não tem conta? <strong><Link to="/cadastro">Cadastra-se</Link></strong></p>
             </section>
 
 
@@ -41,5 +66,6 @@ function PageLogin() {
 
     )
 }
+
 
 export default PageLogin;
