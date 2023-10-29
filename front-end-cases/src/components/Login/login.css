@@ -13,13 +13,14 @@
 }
 
 .login .inputs-login {
-    height: 400px;
+    height: 500px;
     width: 100%;
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* background-color: #0073CF; */
 }
 
 .inputs-login label{
@@ -47,7 +48,7 @@ input:focus, input:focus {
     border: #fff solid 1px;
 }
 .inputs-login p{
-    margin-top: 10px;
+    margin-top: 50px;
 }
 .inputs-login p a{
     color: #0073CF;
