@@ -22,20 +22,25 @@ function PageLogin( ) {
                 setEmail('');
                 setSenha('');
                 setLog(true);
-                toast.success("Logado com sucesso");
             })
             .catch(() => {
                 toast.error("Erro ao fazer login");
+                setLog(false);
             })
+
+           
     }
 
-    console.log(log);
+    if(log === true){
+        window.location.href = "http://localhost:3000/";
+    }
+
+    // console.log(log);
 
     return (
         <div className="login">
             <div className="title">
                 <h1>Minha conta</h1>
-                {log === true ? <p>Logado</p> : <p>Deslogado</p> }
             </div>
 
             <section className="inputs-login">
@@ -45,6 +50,7 @@ function PageLogin( ) {
                     placeholder="Digite seu email.."
                     value={email}
                     onChange={e => setEmail(e.target.value)}
+                    name='email'
                 />
 
                 <label>Senha</label>
@@ -52,6 +58,7 @@ function PageLogin( ) {
                     placeholder="Digite sua senha.."
                     value={senha}
                     onChange={e => setSenha(e.target.value)}
+                    name='password'
                 />
 
                 <button className="button-logar" onClick={Logar}>Entrar</button>

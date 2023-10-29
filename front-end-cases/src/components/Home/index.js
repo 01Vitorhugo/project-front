@@ -1,7 +1,31 @@
 import './home.css';
-
+import {  useEffect} from 'react';
+// import { StateContext } from '../../ContextApi/states';
+import { auth } from '../../BD-login';
+import { toast } from "react-toastify";
+ 
+import {  onAuthStateChanged } from "firebase/auth"
 
 function HomePage() {
+
+    // const {log, setLog} = useContext(StateContext);
+
+    useEffect(()=>{
+        async function ObsUser(){
+            onAuthStateChanged(auth, (user) => {
+                if(user){
+                    // setLog(true);
+                    toast.success("Você esta Online 😃");
+                }else{
+                    // setLog(false);
+                    toast.error("Você esta Ofline 😔");
+                }
+            })
+        }
+        ObsUser();
+    }, [])
+    
+    
 
     return (
         <div className="home">

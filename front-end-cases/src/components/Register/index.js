@@ -44,6 +44,7 @@ function PageCadastro() {
                     placeholder="Digite seu email.."
                     value={email}
                     onChange={e => setEmail(e.target.value)}
+                    name='email'
                 />
 
                 <label>Senha</label>
@@ -51,6 +52,7 @@ function PageCadastro() {
                     placeholder="Digite sua senha.."
                     value={senha}
                     onChange={e => setSenha(e.target.value)}
+                    name='password'
                 />
 
                 <button className="button-logar" onClick={Cadastrar}>Cadastrar</button>

@@ -1,9 +1,10 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
 import { StateContext } from '../../ContextApi/states';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../BD-login';
+import {  onAuthStateChanged } from "firebase/auth"
 
 
 
@@ -27,6 +28,19 @@ function NavPage() {
 
     }
 
+    useEffect(()=>{
+        async function ObsUser(){
+            onAuthStateChanged(auth, (user) => {
+                if(user){
+                    setLog(true);
+                }else{
+                    setLog(false);
+                }
+            })
+        }
+        ObsUser();
+    }, [setLog])
+    
 
     return (
         <div className="nav">
