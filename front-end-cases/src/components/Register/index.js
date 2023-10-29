@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './cadastro.css';
 // import { Link } from 'react-router-dom';
 import { auth } from '../../BD-login';
+import { toast } from "react-toastify";
 
 import { createUserWithEmailAndPassword  } from "firebase/auth"
 
@@ -14,16 +15,16 @@ function PageCadastro() {
         .then(()=>{
             setEmail('');
             setSenha('');
-            alert('Cadastro aceito');
+            toast.success("Cadastrado com sucesso");
 
         })
         .catch((error)=>{
 
             //senha fraca
             if(error.code === 'auth/weak-password'){
-                alert('Senha muito fraca');
+                toast.warn("Senha muito fraca");
             }else if(error.code === 'auth/email-already-in-use'){
-            alert('Email já existe')
+                toast.warn("Email ja existente");
           }
             
         })

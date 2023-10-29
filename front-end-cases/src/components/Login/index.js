@@ -1,42 +1,41 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './login.css';
 import { Link } from 'react-router-dom';
 import { auth } from '../../BD-login';
+import { toast } from "react-toastify";
 
 import { signInWithEmailAndPassword } from "firebase/auth"
+import { StateContext } from '../../ContextApi/states';
+
 
 function PageLogin( ) {
 
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
-    // const [log, setLog] = useState(false);
+
+    const {log, setLog} = useContext(StateContext);
 
     async function Logar() {
+
         await signInWithEmailAndPassword(auth, email, senha)
             .then(() => {
                 setEmail('');
                 setSenha('');
-                alert('Logado com sucesso');
-                // setLog(true);
+                setLog(true);
+                toast.success("Logado com sucesso");
             })
             .catch(() => {
-                alert('Erro ao logar')
+                toast.error("Erro ao fazer login");
             })
-
     }
 
-    // //Deslogando do sistema
-    // async function logof() {
-    //     await signOut(auth)
-    //     setLog(false);
-
-
-    // }
+    console.log(log);
 
     return (
         <div className="login">
             <div className="title">
                 <h1>Minha conta</h1>
+                {log === true ? <p>Logado</p> : <p>Deslogado</p> }
             </div>
 
             <section className="inputs-login">

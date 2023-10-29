@@ -1,19 +1,22 @@
+import StatesProvider from "./ContextApi/states";
 import RoutsPage from "./Routs";
 import './app.css';
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
- 
+
   return (
-    <div className="App">
-      <RoutsPage/>
-
-      <div className="whats">
-       <a href="https://wa.me/11995216604"> <img src={require('./Imagens/logo-whats-branco.png')} alt="logo-whats"/></a>
-
+    <StatesProvider>
+      <div className="App">
+        <ToastContainer autoClose={3000} />
+        <RoutsPage />
+        <div className="whats">
+          <a href="https://wa.me/11995216604"> <img src={require('./Imagens/logo-whats-branco.png')} alt="logo-whats" /></a>
+        </div>
       </div>
-
-    </div>
+    </StatesProvider>
   );
 }
 
