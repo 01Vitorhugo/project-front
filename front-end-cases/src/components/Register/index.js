@@ -1,21 +1,24 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import './cadastro.css';
 // import { Link } from 'react-router-dom';
 import { auth } from '../../BD-login';
 import { toast } from "react-toastify";
 
 import { createUserWithEmailAndPassword  } from "firebase/auth"
+import { StateContext } from '../../ContextApi/states';
 
 function PageCadastro() {
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
+
+    const {log} = useContext(StateContext);
 
     async function Cadastrar(){
         await createUserWithEmailAndPassword(auth, email, senha)
         .then(()=>{
             setEmail('');
             setSenha('');
-            toast.success("Cadastrado com sucesso");
+            // toast.success("Cadastrado com sucesso");
 
         })
         .catch((error)=>{
@@ -29,6 +32,10 @@ function PageCadastro() {
             
         })
     
+    }
+
+    if(log === true){
+        window.location.href = "http://localhost:3000/";
     }
 
     return (
