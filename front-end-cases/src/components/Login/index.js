@@ -32,7 +32,14 @@ function PageLogin( ) {
     }
 
     if(log === true){
-        window.location.href = "http://localhost:3000/";
+        // window.location.href = "http://localhost:3000/";
+
+        return(
+            <div className='online'>
+                <button> <Link to="/">Home</Link> </button>
+
+            </div>
+        )
     }
 
     // console.log(log);
@@ -46,11 +53,12 @@ function PageLogin( ) {
             <section className="inputs-login">
 
                 <label>Email</label>
-                <input type='text'
+                <input type='email'
                     placeholder="Digite seu email.."
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     name='email'
+                    required
                 />
 
                 <label>Senha</label>
@@ -59,6 +67,7 @@ function PageLogin( ) {
                     value={senha}
                     onChange={e => setSenha(e.target.value)}
                     name='password'
+                    required
                 />
 
                 <button className="button-logar" onClick={Logar}>Entrar</button>

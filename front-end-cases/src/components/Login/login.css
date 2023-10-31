@@ -46,6 +46,7 @@ input:focus, input:focus {
 }
 .button-logar{
     border: #fff solid 1px;
+    cursor: pointer;
 }
 .inputs-login p{
     margin-top: 50px;
@@ -53,4 +54,19 @@ input:focus, input:focus {
 .inputs-login p a{
     color: #0073CF;
     text-decoration: none;
+}
+.online{
+    width: 100%;
+    height: calc(100vh - 83px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.online button{
+    width: 200px;
+    max-width: 250px;
+    height: 40px;
+    max-height: 50px;
+    background-color: #0073CF;  
+    border-radius: 10px;
 }
