@@ -32,7 +32,7 @@ function PageLogin( ) {
     }
 
     if(log === true){
-        window.location.href = "http://localhost:3000/home";
+        window.location.href = "https://www.google.com";
     }
 
     // console.log(log);

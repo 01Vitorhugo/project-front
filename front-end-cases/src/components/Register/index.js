@@ -35,7 +35,7 @@ function PageCadastro() {
     }
 
     if(log === true){
-        window.location.href = "http://localhost:3000/home";
+        window.location.href = "http://localhost:3000/";
     }
 
     return (
