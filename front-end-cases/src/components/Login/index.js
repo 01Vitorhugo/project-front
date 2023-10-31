@@ -32,7 +32,6 @@ function PageLogin( ) {
     }
 
     if(log === true){
-<<<<<<< HEAD
         // window.location.href = "http://localhost:3000/";
 
         return(
@@ -41,9 +40,8 @@ function PageLogin( ) {
 
             </div>
         )
-=======
-        window.location = "http://localhost:3000/";
->>>>>>> 32a15f17a188514b9ba6bfba84520d16d67b5e6f
+
+
     }
 
     // console.log(log);
