@@ -12,7 +12,7 @@ function RoutsPage(){
        <NavPage/>
 
             <Routes>
-                <Route  path="/home" element={ <HomePage/> }/>
+                <Route  path="/" element={ <HomePage/> }/>
                 <Route  path="/login" element={ <PageLogin/> }/>
                 <Route  path="/cadastro" element={ <PageCadastro/> }/>
             </Routes>
