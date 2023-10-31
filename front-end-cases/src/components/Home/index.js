@@ -5,6 +5,7 @@ import { auth } from '../../BD-login';
 import { toast } from "react-toastify";
  
 import {  onAuthStateChanged } from "firebase/auth"
+import NovidadesHome from '../NovidadesHome';
 
 function HomePage() {
 
@@ -43,6 +44,8 @@ function HomePage() {
 
                 </div>
             </div>
+
+            <NovidadesHome/>
 
 
         </div>
