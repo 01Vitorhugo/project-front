@@ -3,7 +3,7 @@ import './novidades.css';
 
 
 function NovidadesHome() {
-    const [title, setTitle] = useState('Novidades');
+    const [title] = useState('Novidades');
 
     return (
         <div className="novidades">
@@ -18,80 +18,91 @@ function NovidadesHome() {
                 <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-
                     </figure>
+                    <h2>NomeProduto</h2>
+                    <h1>25 <strong>Reais</strong></h1>
 
                 </div>
 
                 <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-
                     </figure>
+                    <h2>NomeProduto</h2>
+                    <h1>25 <strong>Reais</strong></h1>
 
                 </div>
 
                 <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-
                     </figure>
+                    <h2>NomeProduto</h2>
+                    <h1>25 <strong>Reais</strong></h1>
 
                 </div>
 
                 <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-
                     </figure>
+                    <h2>NomeProduto</h2>
+                    <h1>25 <strong>Reais</strong></h1>
 
                 </div>
 
                 <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-
                     </figure>
+                    <h2>NomeProduto</h2>
+                    <h1>25 <strong>Reais</strong></h1>
 
                 </div>
 
                 <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-
                     </figure>
+                    <h2>NomeProduto</h2>
+                    <h1>25 <strong>Reais</strong></h1>
 
                 </div>
 
                 <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-
                     </figure>
+                    <h2>NomeProduto</h2>
+                    <h1>25 <strong>Reais</strong></h1>
 
                 </div>
 
                 <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-
                     </figure>
+                    <h2>NomeProduto</h2>
+                    <h1>25 <strong>Reais</strong></h1>
 
                 </div>
 
                 <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-
                     </figure>
+                    <h2>NomeProduto</h2>
+                    <h1>25 <strong>Reais</strong></h1>
+
 
                 </div>
 
                 <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-
                     </figure>
+                    <h2>NomeProduto</h2>
+                    <h1>25 <strong>Reais</strong></h1>
 
                 </div>
 

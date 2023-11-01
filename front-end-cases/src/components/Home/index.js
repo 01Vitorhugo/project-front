@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
  
 import {  onAuthStateChanged } from "firebase/auth"
 import NovidadesHome from '../NovidadesHome';
+import InfoHome from '../InfoHome';
 
 function HomePage() {
 
@@ -46,6 +47,8 @@ function HomePage() {
             </div>
 
             <NovidadesHome/>
+
+            <InfoHome/>
 
 
         </div>

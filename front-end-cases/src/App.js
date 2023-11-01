@@ -15,6 +15,7 @@ function App() {
         <div className="whats">
           <a href="https://wa.me/11995216604"> <img src={require('./Imagens/logo-whats-branco.png')} alt="logo-whats" /></a>
         </div>
+      
       </div>
     </StatesProvider>
   );

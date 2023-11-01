@@ -1,0 +1,12 @@
+.infoHome{
+    margin-top: 50px;
+    height: 120px;
+    background: rgba(190, 21, 34, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    color: #ffff;
+
+}
