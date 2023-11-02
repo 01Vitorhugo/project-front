@@ -2,9 +2,9 @@
 
 # É necessário instalar alguns **PACKAGES** para não ocorrer erros no sistema..
 
-## Comandos dos **packages**
+## Comandos dos **packages** [!IMPORTANT]
 
-###  `#0969DA` npm i react-scroll
+### npm i react-scroll
 > Utilizamos para uma experiência melhor do usuário ao fazer a animação de scroll no site.
 
 ### npm i @fortawesome/fontawesome-free
