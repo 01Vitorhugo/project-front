@@ -1,5 +1,4 @@
 import './footer.css';
-import '@fortawesome/fontawesome-free/css/all.css';
 
 const Footer = () => {
   return (

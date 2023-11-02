@@ -3,10 +3,27 @@ import RoutsPage from "./Routs";
 import './app.css';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 import Footer from "./components/Footer";
+import { useState } from "react";
+import { animateScroll as scroll } from 'react-scroll';
 
 
 function App() {
+
+  const [setaScroll, setSetaScrollY] = useState(0);
+
+
+  function getScroll(){
+    setSetaScrollY(window.scrollY);
+  }
+  window.addEventListener('scroll', getScroll);
+
+  function GoTop(){
+    scroll.scrollToTop();
+  }
+
+
 
   return (
     <StatesProvider>
@@ -18,6 +35,11 @@ function App() {
           <a href="https://wa.me/11995216604"> <img src={require('./Imagens/logo-whats-branco.png')} alt="logo-whats" /></a>
         </div>
 
+         {setaScroll > 180 && 
+          <div className="scroll">
+           <button onClick={GoTop}><i class="fa-solid fa-chevron-up"></i></button>
+          </div>
+         } 
         <Footer/>
         
       </div>

@@ -15,7 +15,7 @@ body {
     height: 50px;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,4 +25,36 @@ body {
 .whats img{
     height: 30px;
     margin-left: 3px;
+}
+.App .scroll{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.scroll button{
+    background-color: transparent;
+    cursor: pointer;
+}
+.scroll button i{
+    color: aliceblue;
+    font-size: 30px;
+    animation: seta 2s ease-in-out infinite;
+}
+
+@keyframes seta{
+    0%{
+        transform: scale(1.2);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
 }
