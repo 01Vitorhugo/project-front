@@ -2,7 +2,8 @@
 
 # É necessário instalar alguns **PACKAGES** para não ocorrer erros no sistema..
 
-## Comandos dos **packages** [!IMPORTANT]
+## Comandos dos **packages** 
+> [!IMPORTANT]
 
 ### npm i react-scroll
 > Utilizamos para uma experiência melhor do usuário ao fazer a animação de scroll no site.
