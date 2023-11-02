@@ -32,7 +32,7 @@ function App() {
         <RoutsPage />
 
         <div className="whats">
-          <a href="https://wa.me/11995216604"> <img src={require('./Imagens/logo-whats-branco.png')} alt="logo-whats" /></a>
+          <a href="https://wa.me/11995216604"><i className="fab fa-whatsapp"></i></a>
         </div>
 
          {setaScroll > 180 && 
