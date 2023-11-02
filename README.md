@@ -4,7 +4,7 @@
 
 ## Comandos dos **packages**
 
-### npm i react-scroll
+###  `#0969DA` npm i react-scroll
 > Utilizamos para uma experiência melhor do usuário ao fazer a animação de scroll no site.
 
 ### npm i @fortawesome/fontawesome-free
