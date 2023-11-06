@@ -16,8 +16,6 @@ function RoutsPage(){
                 <Route  path="/login" element={ <PageLogin/> }/>
                 <Route  path="/cadastro" element={ <PageCadastro/> }/>
             </Routes>
-            
-            // Criar routs privada para nao dar interferencia quando o usuario estiver logado
 
        </BrowserRouter>
         
