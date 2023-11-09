@@ -1,0 +1,96 @@
+.conteudoClienteHome{
+    width: 100%;
+    height: auto;
+    margin-top: 34px;
+}
+.conteudoClienteHome  .title {
+    width: auto;
+    height: auto;
+    margin-top: 34px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 18px;
+    color: #ffff;
+}
+
+.title h1 {
+    font-size: larger;
+}
+
+.title svg {
+    margin-left: 13px;
+    margin-top: 3px;
+}
+.conteudoClienteHome .conteudoCliente{
+    width: 100%;
+    height: auto;
+ 
+}
+.conteudoCliente  section{
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+section .conteudo {
+    height: 160px;
+    width: 100px;
+    background: rgba(36, 36, 36, 0.64);
+    box-shadow: 0px 4px 100px 0px #000 inset;
+    border-radius: 10px;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.conteudo .produto{
+    width: 90%;
+    height: 30px;
+    background-color: #0073CF;
+    margin-top: 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.produto a{
+    font-size: x-small;
+    color: #ffff;
+    text-decoration: none;
+}
+
+.conteudo figure {
+    height: 60%;
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure img {
+    object-fit: cover;
+}
+.conteudo h2{
+    font-size: x-small;
+    margin-top: 10px;
+}
+.conteudoClienteHome .verMais{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.verMais a{
+    font-size: medium;
+    color: #ffff;
+    text-decoration: none;
+}

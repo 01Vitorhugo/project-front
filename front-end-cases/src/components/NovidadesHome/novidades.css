@@ -19,7 +19,7 @@
 }
 
 .novidades section {
-    height: 250px;
+    height: 200px;
     width: 100%;
     margin-top: 25px;
     overflow-x: scroll;
@@ -41,6 +41,10 @@ section .conteudo {
     background: rgba(36, 36, 36, 0.64);
     box-shadow: 0px 4px 100px 0px #000 inset;
     border-radius: 10px;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .conteudo figure {
@@ -56,4 +60,15 @@ section .conteudo {
 
 figure img {
     object-fit: cover;
+}
+.conteudo h2{
+    font-size: smaller;
+    margin-top: 10px;
+}
+.conteudo h1{
+    font-size: larger;
+    margin-top: 20px;
+}
+.conteudo h1 strong{
+    font-size: small;
 }

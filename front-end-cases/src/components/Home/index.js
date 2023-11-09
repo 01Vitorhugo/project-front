@@ -1,23 +1,24 @@
 import './home.css';
-import {  useEffect} from 'react';
+import { useEffect } from 'react';
 // import { StateContext } from '../../ContextApi/states';
 import { auth } from '../../BD-login';
 import { toast } from "react-toastify";
- 
-import {  onAuthStateChanged } from "firebase/auth"
+
+import { onAuthStateChanged } from "firebase/auth"
 import NovidadesHome from '../NovidadesHome';
+import ConteudoClienteHome from '../ConteudoClienteHome';
 
 function HomePage() {
 
     // const {log, setLog} = useContext(StateContext);
 
-    useEffect(()=>{
-        async function ObsUser(){
+    useEffect(() => {
+        async function ObsUser() {
             onAuthStateChanged(auth, (user) => {
-                if(user){
+                if (user) {
                     // setLog(true);
                     toast.success("Você esta Online 😃");
-                }else{
+                } else {
                     // setLog(false);
                     toast.error("Você esta Ofline 😔");
                 }
@@ -25,18 +26,18 @@ function HomePage() {
         }
         ObsUser();
     }, [])
-    
-    
+
+
 
     return (
         <div className="home">
             <figure className="banner-home">
-                <img src={require('../../Imagens/banner-teste.png')} alt="banner"/>
+                <img src={require('../../Imagens/banner-teste.png')} alt="banner" />
             </figure>
 
             <div className="link-whats">
                 <div className="logo-whats">
-                    <img src={require('../../Imagens/logo-whats-branco.png')} alt="logo-whatsapp"/>
+                    <i className="fab fa-whatsapp"></i>
                 </div>
                 <div className="info-whats">
                     <h1>Entre em contato conosco</h1>
@@ -45,7 +46,14 @@ function HomePage() {
                 </div>
             </div>
 
-            <NovidadesHome/>
+            <NovidadesHome />
+
+            <div className="infoHome">
+                <i className="fab fa-instagram"></i>
+                <p>Nos acompanhe no @CriarInstal</p>
+            </div>
+
+            <ConteudoClienteHome/>
 
 
         </div>

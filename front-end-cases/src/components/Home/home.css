@@ -30,9 +30,12 @@
     justify-content: center;
     align-items: center;
 }
+.logo-whats i{
+    font-size: 45px;
+}
 
 .link-whats .info-whats {
-    width: 70%;
+    width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,12 +43,28 @@
 }
 
 .info-whats h1 {
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
 .info-whats p{
-    font-size: 12px;
+    font-size: 10px;
     margin-top: 4px;
+}
+
+.infoHome{
+    margin-top: 50px;
+    height: 110px;
+    background: rgba(190, 21, 34, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    color: #ffff;
+
+}
+.infoHome i{
+    font-size: 45px;
 }
