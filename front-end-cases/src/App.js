@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import { useState } from "react";
 import { animateScroll as scroll } from 'react-scroll';
 
-
 function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
