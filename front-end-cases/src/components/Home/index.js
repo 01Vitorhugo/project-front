@@ -1,6 +1,5 @@
 import './home.css';
-import { useEffect } from 'react';
-// import { StateContext } from '../../ContextApi/states';
+import { useEffect} from 'react';
 import { auth } from '../../BD-login';
 import { toast } from "react-toastify";
 
@@ -8,9 +7,10 @@ import { onAuthStateChanged } from "firebase/auth"
 import NovidadesHome from '../NovidadesHome';
 import ConteudoClienteHome from '../ConteudoClienteHome';
 
+
 function HomePage() {
 
-    // const {log, setLog} = useContext(StateContext);
+    
 
     useEffect(() => {
         async function ObsUser() {
@@ -45,7 +45,7 @@ function HomePage() {
 
                 </div>
             </div>
-
+          
             <NovidadesHome />
 
             <div className="infoHome">
@@ -54,6 +54,8 @@ function HomePage() {
             </div>
 
             <ConteudoClienteHome/>
+
+           
 
 
         </div>

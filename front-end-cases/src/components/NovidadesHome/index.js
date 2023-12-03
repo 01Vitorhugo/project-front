@@ -1,7 +1,11 @@
 import './novidades.css';
+import { StateContext } from '../../ContextApi/states';
+import { useContext } from 'react';
 
 
 function NovidadesHome() {
+
+    const { apiNovidade } = useContext(StateContext);
 
     return (
         <div className="novidades">
@@ -13,7 +17,25 @@ function NovidadesHome() {
             </div>
 
             <section>
-                <div className="conteudo">
+                {
+                    apiNovidade.map((list) => {
+
+                        return (
+                            <div className="conteudo" key={list.id}>
+                                <figure>
+                                    <img src={list.img} alt="img-produto" />
+                                </figure>
+                                <h2>{list.id}</h2>
+
+                            </div>
+                        )
+                    })
+                }
+
+
+
+
+                {/* <div className="conteudo">
                     <figure>
                         <img src={require('../../Imagens/produto.png')} alt="img-produto" />
                     </figure>
@@ -83,15 +105,6 @@ function NovidadesHome() {
                     <h2>NomeProduto</h2>
                     <h1>25 <strong>Reais</strong></h1>
 
-                </div>
-
-                <div className="conteudo">
-                    <figure>
-                        <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-                    </figure>
-                    <h2>NomeProduto</h2>
-                    <h1>25 <strong>Reais</strong></h1>
-
 
                 </div>
 
@@ -102,7 +115,7 @@ function NovidadesHome() {
                     <h2>NomeProduto</h2>
                     <h1>25 <strong>Reais</strong></h1>
 
-                </div>
+                </div> */}
 
             </section>
 
