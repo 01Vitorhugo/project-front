@@ -6,17 +6,6 @@ import { useContext } from 'react';
 function NovidadesHome() {
 
     const { apiNovidade } = useContext(StateContext);
-    const { carrinho, setCarrinho } = useContext(StateContext);
-
-    function Fav(){
-        var carrinho = 0;
-
-        carrinho++;
-
-        setCarrinho(carrinho);
-
-    }
-    console.log(carrinho);
 
     return (
         <div className="novidades">
@@ -33,13 +22,6 @@ function NovidadesHome() {
 
                         return (
                             <div className="conteudo" key={list.id}>
-
-                                {carrinho === 0 ? <button onClick={Fav}><i class="fa-solid fa-heart"></i></button>
-
-                                    : <button onClick={Fav}><i class="fa-solid fa-heart"></i></button>
-
-                                }
-
 
                                 <figure>
                                     <img src={list.img} alt="img-produto" />

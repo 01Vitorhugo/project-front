@@ -1,8 +1,11 @@
 import './conteudoCliente.css';
 import { Link } from 'react-router-dom';
-
+import { StateContext } from '../../ContextApi/states';
+import { useContext } from 'react';
 
 function ConteudoClienteHome() {
+
+    const { apiParaVoce } = useContext(StateContext);
 
 
     return (
@@ -16,112 +19,29 @@ function ConteudoClienteHome() {
 
             <div className="conteudo">
                 <section>
-                    <div className="conteudoCliente">
-                        <figure>
-                            <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-                        </figure>
-                        <div className='produto'>
-                        <Link to="/CriarPage">Ver produto</Link>
 
-                        </div>
+                    {
+                        apiParaVoce.map((list) => {
+                            return (
+                                <div className="conteudoCliente" key={list.id}>
+                                    <figure>
+                                        <img src={list.img} alt="img-produto" />
+                                    </figure>
+                                    <h2>{list.valor} Reais</h2>
+                                    <div className='produto'>
+                                        <Link to="/CriarPage">Ver Capinha</Link>
 
-                    </div>
+                                    </div>
 
-                    <div className="conteudoCliente">
-                        <figure>
-                            <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-                        </figure>
-                        <div className='produto'>
-                        <Link to="/CriarPage">Ver produto</Link>
+                                </div>
 
-                        </div>
+                            )
+                        })
+                    }
 
-                    </div>
-
-                    <div className="conteudoCliente">
-                        <figure>
-                            <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-                        </figure>
-                        <div className='produto'>
-                        <Link to="/CriarPage">Ver produto</Link>
-
-                        </div>
-
-                    </div>
-
-                    <div className="conteudoCliente">
-                        <figure>
-                            <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-                        </figure>
-                        <div className='produto'>
-                        <Link to="/CriarPage">Ver produto</Link>
-
-                        </div>
-
-                    </div>
-
-                    <div className="conteudoCliente">
-                        <figure>
-                            <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-                        </figure>
-                        <div className='produto'>
-                        <Link to="/CriarPage">Ver produto</Link>
-
-                        </div>
-
-                    </div>
-
-                    <div className="conteudoCliente">
-                        <figure>
-                            <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-                        </figure>
-                        <div className='produto'>
-                        <Link to="/CriarPage">Ver produto</Link>
-
-                        </div>
-
-                    </div>
-
-                    <div className="conteudoCliente">
-                        <figure>
-                            <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-                        </figure>
-                        <div className='produto'>
-                        <Link to="/CriarPage">Ver produto</Link>
-
-                        </div>
-
-                    </div>
-
-                    <div className="conteudoCliente">
-                        <figure>
-                            <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-                        </figure>
-                        <div className='produto'>
-                        <Link to="/CriarPage">Ver produto</Link>
-
-                        </div>
-
-                    </div>
-
-                    <div className="conteudoCliente">
-                        <figure>
-                            <img src={require('../../Imagens/produto.png')} alt="img-produto" />
-                        </figure>
-                        <div className='produto'>
-                            <Link to="/CriarPage">Ver produto</Link>
-
-                        </div>
-
-                    </div>
 
                 </section>
 
-                <div className="verMais">
-                   
-                  <Link to="/CriarPage">Ver mais</Link>
-
-                </div>
 
             </div>
 

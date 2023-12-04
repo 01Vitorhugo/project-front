@@ -5,7 +5,6 @@ export const StateContext = createContext({});
 function StatesProvider({ children }){
 
     const [log, setLog] = useState(false);
-    const [ carrinho, setCarrinho ] = useState(0);
 
     const [ apiNovidade ] = useState(
         [
@@ -28,10 +27,25 @@ function StatesProvider({ children }){
         ]
     );
 
+    const [ apiParaVoce ] = useState(
+        [
+            { id: 14, valor: 35, modelo: "Iphone 13", img: "https://cdn.awsli.com.br/600x450/443/443889/produto/213100651/smiles-cdr_iphone-13-a604v235lg.png" },
+            { id: 15, valor: 25, modelo: "Iphone 13", img: "https://conteudos.meo.pt/catalogo/isell/acessorios/acessorios-iphone-13/capas-apple/capa-silicone-com-magsafe-para-iphone-13-preto-meia-noite-costas-meo.png" },
+            { id: 16, valor: 30, modelo: "Iphone 13", img: "https://ae01.alicdn.com/kf/S16dc0ea9f5ff4c88881bdbfca1ce066bJ.png_640x640.png_.webp" },
+            { id: 17, valor: 35, modelo: "Iphone 13", img: "https://www.gospelcase.com.br/image/cache/catalog/R165%20NOVA%20FRONT-1000x1000.png" },
+            { id: 18, valor: 35, modelo: "Iphone 13 pro max", img: "https://cdn.awsli.com.br/600x450/443/443889/produto/213100654/smiles-cdr_iphone-13-pro-max-khtts6v4uk.png" },
+            { id: 19, valor: 35, modelo: "Iphone 13 pro max", img: "https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw3ece8d2b/images/large/52900017_1.png" },
+            { id: 20, valor: 25, modelo: "Iphone 13 pro max", img: "https://debelaa.com/cdn/shop/files/S87d86159f87f4c68892b7f2f46a50179P.png?v=1685021395" },
+            { id: 21, valor: 25, modelo: "Iphone 13 pro max", img: "https://cdn.vxcase.com.br/media/catalog/product/cache/854413d9c7f0b6ee978707af8ce198f7/c/a/capa-defender-vx-case-magsafe-iphone-13-pro---preta.png" },
+            { id: 22, valor: 25, modelo: "Iphone 12 pro ", img: "https://cdn.vxcase.com.br/media/amasty/webp/catalog/product/cache/854413d9c7f0b6ee978707af8ce198f7/2/5/25803-case-defender-preta_png.webp" },
+            { id: 23, valor: 30, modelo: "Iphone 12 pro ", img: "https://images.yampi.me/assets/stores/datelamps/uploads/images/capinha-iphone-astronauta-flutuante-roxo-iphone-14-636ee8b50c727-large.png" }
+        ]
+    )
+
    
 
     return (
-        <StateContext.Provider value={{ log, setLog, apiNovidade, carrinho, setCarrinho }}>
+        <StateContext.Provider value={{ log, setLog, apiNovidade, apiParaVoce}}>
             { children }
         </StateContext.Provider>
     )
