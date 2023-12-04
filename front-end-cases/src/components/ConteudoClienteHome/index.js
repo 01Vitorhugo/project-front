@@ -14,9 +14,9 @@ function ConteudoClienteHome() {
                 </svg>
             </div>
 
-            <div className="conteudoCliente">
+            <div className="conteudo">
                 <section>
-                    <div className="conteudo">
+                    <div className="conteudoCliente">
                         <figure>
                             <img src={require('../../Imagens/produto.png')} alt="img-produto" />
                         </figure>
@@ -27,7 +27,7 @@ function ConteudoClienteHome() {
 
                     </div>
 
-                    <div className="conteudo">
+                    <div className="conteudoCliente">
                         <figure>
                             <img src={require('../../Imagens/produto.png')} alt="img-produto" />
                         </figure>
@@ -38,7 +38,7 @@ function ConteudoClienteHome() {
 
                     </div>
 
-                    <div className="conteudo">
+                    <div className="conteudoCliente">
                         <figure>
                             <img src={require('../../Imagens/produto.png')} alt="img-produto" />
                         </figure>
@@ -49,7 +49,7 @@ function ConteudoClienteHome() {
 
                     </div>
 
-                    <div className="conteudo">
+                    <div className="conteudoCliente">
                         <figure>
                             <img src={require('../../Imagens/produto.png')} alt="img-produto" />
                         </figure>
@@ -60,7 +60,7 @@ function ConteudoClienteHome() {
 
                     </div>
 
-                    <div className="conteudo">
+                    <div className="conteudoCliente">
                         <figure>
                             <img src={require('../../Imagens/produto.png')} alt="img-produto" />
                         </figure>
@@ -71,7 +71,7 @@ function ConteudoClienteHome() {
 
                     </div>
 
-                    <div className="conteudo">
+                    <div className="conteudoCliente">
                         <figure>
                             <img src={require('../../Imagens/produto.png')} alt="img-produto" />
                         </figure>
@@ -82,7 +82,7 @@ function ConteudoClienteHome() {
 
                     </div>
 
-                    <div className="conteudo">
+                    <div className="conteudoCliente">
                         <figure>
                             <img src={require('../../Imagens/produto.png')} alt="img-produto" />
                         </figure>
@@ -93,7 +93,7 @@ function ConteudoClienteHome() {
 
                     </div>
 
-                    <div className="conteudo">
+                    <div className="conteudoCliente">
                         <figure>
                             <img src={require('../../Imagens/produto.png')} alt="img-produto" />
                         </figure>
@@ -104,7 +104,7 @@ function ConteudoClienteHome() {
 
                     </div>
 
-                    <div className="conteudo">
+                    <div className="conteudoCliente">
                         <figure>
                             <img src={require('../../Imagens/produto.png')} alt="img-produto" />
                         </figure>

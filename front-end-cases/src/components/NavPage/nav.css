@@ -3,6 +3,9 @@
     height: 83px;
     width: 100%;
     display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
 
 .nav .icon-menu {
@@ -103,7 +106,6 @@ button a{
 }
 
 .topics .login {
-     /* background-color: aqua;  */
     height: 50px;
     display: flex;
     justify-content: center;
