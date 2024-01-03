@@ -2,9 +2,13 @@ import { createContext, useState } from "react";
 
 export const StateContext = createContext({});
 
-function StatesProvider({ children }){
+function StatesProvider({ children }){ 
 
     const [log, setLog] = useState(false);
+
+    const [ itemCapinhaInfo, setItemCapinhaInfo] = useState([]);
+        console.log(itemCapinhaInfo);
+   
 
     const [ apiNovidade ] = useState(
         [
@@ -22,7 +26,6 @@ function StatesProvider({ children }){
         { id: 11, valor: 25, modelo: "Iphone --", img: "https://images.dailyobjects.com/marche/product-images/1101/dailyobjects-spider-whisperer-stride-2-0-case-cover-for-iphone-15-pro-max-images/DailyObjects-Spider-Whisperer-Stride-2-0-Case-Cover-For-iPhone-15-Pro-Max.png?tr=cm-pad_resize,v-2,w-412,h-490,dpr-2,q-60" },
         { id: 12, valor: 25, modelo: "Iphone --", img: "https://cdn-stamplib.casetify.com/cms/image/5142c13dea691d817ce456ed811edece.png" },
         { id: 13, valor: 25, modelo: "Iphone --", img: "https://cdn-stamplib.casetify.com/cms/image/bf13209c13b5eb14bb1824f5e7a887a3.png" },
-
 
         ]
     );
@@ -45,7 +48,7 @@ function StatesProvider({ children }){
    
 
     return (
-        <StateContext.Provider value={{ log, setLog, apiNovidade, apiParaVoce}}>
+        <StateContext.Provider value={{ log, setLog, apiNovidade, apiParaVoce, itemCapinhaInfo, setItemCapinhaInfo }}>
             { children }
         </StateContext.Provider>
     )

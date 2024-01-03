@@ -1,11 +1,20 @@
 import './novidades.css';
 import { StateContext } from '../../ContextApi/states';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom'
 
 
 function NovidadesHome() {
 
-    const { apiNovidade } = useContext(StateContext);
+    const { apiNovidade, setItemCapinhaInfo } = useContext(StateContext);
+
+    function ItemNovidade(list) {
+
+        setItemCapinhaInfo([list]);
+
+
+    }
+
 
     return (
         <div className="novidades">
@@ -29,7 +38,7 @@ function NovidadesHome() {
                                 <h2>{list.valor} Reais</h2>
                                 <h3>{list.modelo}</h3>
 
-                                <button className='inspecionar'>inspecionar</button>
+                                <button className='inspecionar' onClick={() => ItemNovidade(list)}><Link to="infoCapinha" >inspecionar</Link></button>
 
                             </div>
                         )

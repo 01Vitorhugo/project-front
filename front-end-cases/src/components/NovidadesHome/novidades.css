@@ -85,7 +85,6 @@ section .conteudo {
 }
 .conteudo .inspecionar{
     margin-top: 10px;
-    font-size: xx-small;
     background: rgba(190, 21, 34, 0.75);
     color: #ffff;
     border-radius: 15px;
@@ -93,4 +92,7 @@ section .conteudo {
     width: 80px;
     height: 20px;
 
+}
+.conteudo .inspecionar a{
+    font-size: xx-small;
 }

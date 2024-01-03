@@ -5,7 +5,8 @@ import { useContext } from 'react';
 
 function ConteudoClienteHome() {
 
-    const { apiParaVoce } = useContext(StateContext);
+    const { apiParaVoce} = useContext(StateContext);
+
 
 
     return (
