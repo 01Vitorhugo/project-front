@@ -1,10 +1,19 @@
 import './infoCapinha.css';
 import { StateContext } from '../../ContextApi/states';
-import { useContext } from 'react';
+import { useContext} from 'react';
 
 function InfoCapinha() {
 
-    const { itemCapinhaInfo, apiParaVoce } = useContext(StateContext);
+    const { itemCapinhaInfo, setItemCapinhaInfo, apiParaVoce } = useContext(StateContext);
+
+
+    function InspecionarItem(item) {
+
+        setItemCapinhaInfo([item]);
+        // console.log(item);
+
+    }
+
 
     return (
         <div className="infoCapinha">
@@ -19,6 +28,7 @@ function InfoCapinha() {
                             </figure>
 
                             <h2>{item.modelo}</h2>
+                            <h3>{item.desc}</h3>
 
                         </div>
                     )
@@ -27,19 +37,28 @@ function InfoCapinha() {
 
             }
 
+
+            <article><h1>Sugestões para você</h1></article>
+
             <section>
+
                 {
                     apiParaVoce.map((item) => {
                         return (
+
+
                             <div className='boxInfoNovidade' key={item.id}>
+
 
                                 <figure>
                                     <img src={item.img} alt="img-produto" />
                                 </figure>
 
-                                <h2>{item.valor} Reais</h2>
+                                <button onClick={() => InspecionarItem(item)}>Inspecionar</button>
 
                             </div>
+
+
                         )
 
                     })
