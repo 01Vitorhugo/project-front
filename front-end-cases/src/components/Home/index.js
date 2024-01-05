@@ -7,7 +7,6 @@ import { onAuthStateChanged } from "firebase/auth"
 import NovidadesHome from '../NovidadesHome';
 
 
-
 function HomePage() {
 
     

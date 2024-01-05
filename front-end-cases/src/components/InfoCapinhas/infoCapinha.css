@@ -90,14 +90,14 @@ section .boxInfoNovidade button {
     margin-top: 10px;
     text-align: center;
 
-    height: 20px;
     width: 80%;
+    height: 27px;
 
     background: rgba(190, 21, 34, 0.75);
     color: #fff;
     border-radius: 10px;
 
-    font-size: x-small;
+    font-size: small;
 
 
 }

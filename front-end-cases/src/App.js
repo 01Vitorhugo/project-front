@@ -4,7 +4,6 @@ import './app.css';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-// import Footer from "./components/Footer";
 import { useState } from "react";
 import { animateScroll as scroll } from 'react-scroll';
 

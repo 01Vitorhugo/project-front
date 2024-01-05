@@ -76,8 +76,7 @@ function InfoCapinha() {
 
             </div>
 
-
-           <section>
+            <section>
             {
                 apiNovidade.map((item) => {
                     return (
@@ -101,7 +100,7 @@ function InfoCapinha() {
 
             }
             </section>
-          
+           
 
 
 
