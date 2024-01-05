@@ -19,7 +19,7 @@
 }
 
 .infoCapinha .boxInfo figure img {
-    height: 300px;
+    max-height: 250px;
 
 }
 
@@ -71,7 +71,7 @@ section .boxInfoNovidade {
     border-radius: 10px;
 
     height: 70%;
-    width: 100px;
+    min-width: 100px;
 
 
     display: flex;
@@ -82,7 +82,7 @@ section .boxInfoNovidade {
 }
 
 section .boxInfoNovidade figure img {
-    height: 100px;
+   max-height: 80px;
 
 }
 
