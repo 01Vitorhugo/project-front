@@ -36,7 +36,6 @@ function NovidadesHome() {
                                     <img src={list.img} alt="img-produto" />
                                 </figure>
                                 <h2>{list.valor} Reais</h2>
-                                <h3>{list.modelo}</h3>
 
                                 <button className='inspecionar' onClick={() => ItemNovidade(list)}><Link to="infoCapinha" >inspecionar</Link></button>
 

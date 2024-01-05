@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 import { onAuthStateChanged } from "firebase/auth"
 import NovidadesHome from '../NovidadesHome';
-import ConteudoClienteHome from '../ConteudoClienteHome';
+
 
 
 function HomePage() {
@@ -53,7 +53,6 @@ function HomePage() {
                 <p>Nos acompanhe no @CriarInstal</p>
             </div>
 
-            <ConteudoClienteHome/>
 
            
 

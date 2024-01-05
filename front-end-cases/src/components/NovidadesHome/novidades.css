@@ -78,21 +78,16 @@ section .conteudo {
     font-size: smaller;
     margin-top: 10px;
 }
-.conteudo h3{
-    font-size: xx-small;
-    margin-top: 15px;
-
-}
 .conteudo .inspecionar{
-    margin-top: 10px;
+    margin-top: 20px;
     background: rgba(190, 21, 34, 0.75);
     color: #ffff;
     border-radius: 15px;
 
-    width: 80px;
-    height: 20px;
+    width: 80%;
+    height: 30px
 
 }
 .conteudo .inspecionar a{
-    font-size: xx-small;
+    font-size: small;
 }
