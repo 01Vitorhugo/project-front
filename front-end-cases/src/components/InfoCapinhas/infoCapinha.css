@@ -1,20 +1,28 @@
 .infoCapinha {
     height: auto;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 90px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
 }
 
 .infoCapinha .boxInfo {
     height: 400px;
+    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: rgba(36, 36, 36, 0.64);
+
+    background: rgba(36, 36, 36);
     box-shadow: 0px 4px 100px 0px #000 inset;
+    border-bottom: #0073CF 1px solid;
+
+    position: fixed;
+    z-index: 1000;
+   
 
 }
 
@@ -40,7 +48,7 @@
     color: #fff;
 
     height: 30px;
-    margin-top: 20px;
+    margin-top: 420px;
 
     display: flex;
     justify-content: center;
