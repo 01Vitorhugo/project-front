@@ -3,13 +3,14 @@ import { useEffect } from 'react';
 import { auth } from '../../BD-login';
 import { toast } from "react-toastify";
 import { Carousel } from 'flowbite-react';
-
 import { onAuthStateChanged } from "firebase/auth"
 import NovidadesHome from '../NovidadesHome';
 
 
 
 function HomePage() {
+
+
 
 
 
@@ -48,6 +49,8 @@ function HomePage() {
                 <div className="logo-whats">
                     <i className="fab fa-whatsapp"></i>
                 </div>
+
+
                 <div className="info-whats">
                     <h1>Entre em contato conosco</h1>
                     <p>Caso precise, só chamar no Whatsapp</p>
@@ -59,7 +62,7 @@ function HomePage() {
 
             <div className="infoHome">
                 <i className="fab fa-instagram"></i>
-                <p>Nos acompanhe no @01Vituus
+                <p>Nos acompanhe @01Vituu
 
                 </p>
             </div>

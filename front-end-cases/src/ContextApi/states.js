@@ -6,8 +6,10 @@ function StatesProvider({ children }){
 
     const [log, setLog] = useState(false);
 
-    const [ itemCapinhaInfo, setItemCapinhaInfo] = useState([]);
-        // console.log(itemCapinhaInfo);
+    const [ itemCapinhaInfo, setItemCapinhaInfo] = useState([
+       {img: "https://www.biotecdermo.com.br/wp-content/uploads/2016/10/sem-imagem-10.jpg"}  
+    ]);
+       
    
 
     const [ apiNovidade ] = useState(

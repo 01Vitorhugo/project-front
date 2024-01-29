@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { StateContext } from '../../ContextApi/states';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../BD-login';
-import {  onAuthStateChanged } from "firebase/auth"
+import { onAuthStateChanged } from "firebase/auth"
 
 
 
@@ -12,7 +12,7 @@ function NavPage() {
 
     const [nav, setNav] = useState(false);
 
-    const {log, setLog} = useContext(StateContext);
+    const { log, setLog } = useContext(StateContext);
 
     function NavInfo() {
         setNav(true);
@@ -22,29 +22,30 @@ function NavPage() {
         setNav(false);
     }
 
-    async function Logof(){
+    async function Logof() {
         await signOut(auth);
         setLog(false);
 
     }
 
-    useEffect(()=>{
-        async function ObsUser(){
-            onAuthStateChanged(auth, (user) => {
-                if(user){
+    useEffect(() => {
+        async function ObsUser() {
+           onAuthStateChanged(auth, (user) => {
+                if (user) {
                     setLog(true);
-                }else{
+                } else {
                     setLog(false);
                 }
             })
         }
         ObsUser();
     }, [setLog])
-    
+
 
     return (
         <div className="nav">
             <div className='icon-menu'>
+
 
                 {nav === false ?
                     <button onClick={NavInfo}>
@@ -65,8 +66,10 @@ function NavPage() {
                             </div>
 
                             <div className='logo-nav'>
-                            <button onClick={VoltaNav}> <Link to='/'><img src={require('../../Imagens/logo.png')} alt='logo' /></Link></button>
+                                <button onClick={VoltaNav}> <Link to='/'><img src={require('../../Imagens/logo.png')} alt='logo' /></Link></button>
                             </div>
+
+
 
                         </div>
 
@@ -78,8 +81,8 @@ function NavPage() {
                                 <li>Película</li>
                             </ul>
                             <div className='login'>
-                                {log === true ?  <button onClick={Logof}>Sair</button> :  <button onClick={VoltaNav}><Link to='/login'>Login</Link></button>} 
-                                 
+                                {log === true ? <button onClick={Logof}>Sair</button> : <button onClick={VoltaNav}><Link to='/login'>Login</Link></button>}
+
                             </div>
 
                         </div>
@@ -89,7 +92,7 @@ function NavPage() {
             </div>
 
             <div className='logo-menu'>
-            <Link to='/'><img src={require('../../Imagens/logo.png')} alt='logo'/></Link>
+                <Link to='/'><img src={require('../../Imagens/logo.png')} alt='logo' /></Link>
             </div>
 
         </div>

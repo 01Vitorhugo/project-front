@@ -4,20 +4,24 @@ import './app.css';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { StateContext } from './ContextApi/states';
 import { animateScroll as scroll } from 'react-scroll';
 
 function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
 
+  const { log } = useContext(StateContext);
+  console.log(log);
 
-  function getScroll(){
+
+  function getScroll() {
     setSetaScrollY(window.scrollY);
   }
   window.addEventListener('scroll', getScroll);
 
-  function GoTop(){
+  function GoTop() {
     scroll.scrollToTop();
   }
 
@@ -33,13 +37,18 @@ function App() {
           <a href="https://wa.me/11995216604"><i className="fab fa-whatsapp"></i></a>
         </div>
 
-         {setaScroll > 180 && 
+        <div className='carrinho'>
+          <i class="fa fa-cart-shopping"></i>
+        </div>
+
+
+        {setaScroll > 180 &&
           <div className="scroll">
-           <button onClick={GoTop}><i class="fa-solid fa-chevron-up"></i></button>
+            <button onClick={GoTop}><i class="fa-solid fa-chevron-up"></i></button>
           </div>
-         } 
+        }
         {/* <Footer/> */}
-        
+
       </div>
     </StatesProvider>
   );

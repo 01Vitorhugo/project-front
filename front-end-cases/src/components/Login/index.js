@@ -14,6 +14,7 @@ function PageLogin( ) {
     const [senha, setSenha] = useState();
 
     const {log, setLog} = useContext(StateContext);
+    
 
     async function Logar() {
 
@@ -33,9 +34,9 @@ function PageLogin( ) {
 
     if(log === true){
      
-
         return(
             <div className='online'>
+                
                 <button> <Link to="/">Home</Link> </button>
 
             </div>
@@ -44,8 +45,7 @@ function PageLogin( ) {
 
     }
 
-    // console.log(log);
-
+   
     return (
         <div className="login">
             <div className="title">

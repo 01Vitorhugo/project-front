@@ -10,7 +10,7 @@ function InfoCapinha() {
     function InspecionarItem(item) {
 
         setItemCapinhaInfo([item]);
-        // console.log(item);
+        
 
     }
 
