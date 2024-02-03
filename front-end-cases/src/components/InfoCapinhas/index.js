@@ -1,18 +1,42 @@
 import './infoCapinha.css';
 import { StateContext } from '../../ContextApi/states';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
+import { toast } from "react-toastify";
 
 function InfoCapinha() {
 
     const { itemCapinhaInfo, setItemCapinhaInfo, apiParaVoce, apiNovidade } = useContext(StateContext);
+    const [car, setCar] = useState(false);
 
+    
+    const {fav, setFav} = useContext(StateContext);
 
     function InspecionarItem(item) {
 
         setItemCapinhaInfo([item]);
-        
 
     }
+
+     function favorito(item) {
+
+        let lista = fav;
+
+        lista.push(item)
+
+        setFav(lista);
+
+        var count = true;
+
+        setCar(count);
+
+        
+
+
+
+       toast.success("Adicionado ao carrinho");
+    }
+
+   console.log(fav);
 
 
     return (
@@ -22,10 +46,26 @@ function InfoCapinha() {
                 itemCapinhaInfo.map((item) => {
                     return (
                         <div className='boxInfo' key={item.id}>
+                            <div className='carrinhoProduto'>
+
+                                <button onClick={() => favorito(item)} >
+
+                                    {car > false
+
+                                        ? <i class="fa fa-heart" id="IconFav"></i>
+                                        : <i class="fa fa-heart "></i>
+
+                                    }
+
+                                </button>
+
+
+                            </div>
 
                             <figure>
                                 <img src={item.img} alt="img-produto" />
                             </figure>
+
 
                             <h2>{item.modelo}</h2>
                             <h3>{item.desc}</h3>
@@ -77,30 +117,30 @@ function InfoCapinha() {
             </div>
 
             <section>
-            {
-                apiNovidade.map((item) => {
-                    return (
+                {
+                    apiNovidade.map((item) => {
+                        return (
 
 
-                        <div className='boxInfoNovidade' key={item.id}>
+                            <div className='boxInfoNovidade' key={item.id}>
 
 
-                            <figure>
-                                <img src={item.img} alt="img-produto" />
-                            </figure>
+                                <figure>
+                                    <img src={item.img} alt="img-produto" />
+                                </figure>
 
-                            <button onClick={() => InspecionarItem(item)}>Inspecionar</button>
+                                <button onClick={() => InspecionarItem(item)}>Inspecionar</button>
 
-                        </div>
+                            </div>
 
 
-                    )
+                        )
 
-                })
+                    })
 
-            }
+                }
             </section>
-           
+
 
 
 

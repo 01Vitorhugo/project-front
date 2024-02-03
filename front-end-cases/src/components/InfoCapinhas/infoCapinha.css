@@ -25,7 +25,26 @@
    
 
 }
+.infoCapinha .boxInfo .carrinhoProduto{
+    color: #fff;
+    position: fixed;
+    right: 10px;
+    top: 100px;
+    
+}
+/* Ocultar o checkbox */
+input[type="checkbox"] {
+    display: none;
+    
+}
 
+
+.infoCapinha .boxInfo .carrinhoProduto button {
+    color: #ffff;
+}
+#IconFav{
+    color: red;
+}
 .infoCapinha .boxInfo figure img {
     max-height: 250px;
 
@@ -129,3 +148,4 @@ section .boxInfoNovidade button {
     margin-left: 13px;
     margin-top: 3px;
 }
+

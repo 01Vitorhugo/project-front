@@ -13,7 +13,7 @@ function App() {
   const [setaScroll, setSetaScrollY] = useState(0);
 
   const { log } = useContext(StateContext);
-  console.log(log);
+  // console.log(log);
 
 
   function getScroll() {
