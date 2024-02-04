@@ -5,11 +5,9 @@ import { toast } from "react-toastify";
 
 function InfoCapinha() {
 
-    const { itemCapinhaInfo, setItemCapinhaInfo, apiParaVoce, apiNovidade } = useContext(StateContext);
+    const { itemCapinhaInfo, setItemCapinhaInfo, apiParaVoce, apiNovidade, fav, setFav } = useContext(StateContext);
     const [car, setCar] = useState(false);
 
-    
-    const {fav, setFav} = useContext(StateContext);
 
     function InspecionarItem(item) {
 
@@ -18,25 +16,19 @@ function InfoCapinha() {
     }
 
      function favorito(item) {
-
-        let lista = fav;
+        var lista = fav;
 
         lista.push(item)
-
         setFav(lista);
-
-        var count = true;
-
-        setCar(count);
-
         
-
+        var count = true;
+        setCar(count);
 
 
        toast.success("Adicionado ao carrinho");
     }
 
-   console.log(fav);
+
 
 
     return (

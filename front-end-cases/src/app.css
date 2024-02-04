@@ -52,7 +52,17 @@ body {
 .carrinho i{
     font-size: 15px;
     color: #fff;
+    position: fixed;
 
+}
+.carrinho h1{
+    position: fixed;
+    font-weight: 400;
+    font-size: 10px;
+    color: #fff;
+    position: relative;
+    bottom: 18px;
+    right: 10px;
 }
 .App .scroll{
     height: 50px;

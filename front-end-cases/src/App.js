@@ -5,15 +5,23 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { useState, useContext } from "react";
-import { StateContext } from './ContextApi/states';
 import { animateScroll as scroll } from 'react-scroll';
+import { StateContext } from "./ContextApi/states";
 
 function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
 
-  const { log } = useContext(StateContext);
-  // console.log(log);
+  const { fav } = useContext(StateContext);
+  const [total, setTotal] = useState([]);
+
+   
+  
+    console.log(total, "totaL")
+
+
+
+
 
 
   function getScroll() {
@@ -38,6 +46,8 @@ function App() {
         </div>
 
         <div className='carrinho'>
+          <h1>{total.length}</h1>
+
           <i class="fa fa-cart-shopping"></i>
         </div>
 
@@ -47,7 +57,7 @@ function App() {
             <button onClick={GoTop}><i class="fa-solid fa-chevron-up"></i></button>
           </div>
         }
-        {/* <Footer/> */}
+
 
       </div>
     </StatesProvider>

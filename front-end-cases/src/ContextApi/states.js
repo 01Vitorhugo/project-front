@@ -7,8 +7,12 @@ function StatesProvider({ children }){
     const [log, setLog] = useState(false);
 
     const [ fav, setFav ] = useState([]);
+   
+    console.log(fav);
+    
 
-    // console.log(fav);
+
+    
 
     const [ itemCapinhaInfo, setItemCapinhaInfo] = useState([
        {img: "https://www.biotecdermo.com.br/wp-content/uploads/2016/10/sem-imagem-10.jpg"}  
@@ -53,7 +57,7 @@ function StatesProvider({ children }){
    
 
     return (
-        <StateContext.Provider value={{ log, setLog, apiNovidade, apiParaVoce, itemCapinhaInfo, setItemCapinhaInfo, fav, setFav }}>
+        <StateContext.Provider value={{log, setLog, apiNovidade, apiParaVoce, itemCapinhaInfo, setItemCapinhaInfo, fav, setFav  }}>
             { children }
         </StateContext.Provider>
     )
