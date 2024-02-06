@@ -5,8 +5,14 @@ import { toast } from "react-toastify";
 
 function InfoCapinha() {
 
-    const { itemCapinhaInfo, setItemCapinhaInfo, apiParaVoce, apiNovidade, fav, setFav } = useContext(StateContext);
+    const { itemCapinhaInfo, setItemCapinhaInfo, apiParaVoce, apiNovidade, setFav, fav } = useContext(StateContext);
     const [car, setCar] = useState(false);
+
+    const [listaItem] = useState([]);
+
+    // console.log(listaItem);
+    // console.log(fav, 'FAV');
+
 
 
     function InspecionarItem(item) {
@@ -15,18 +21,20 @@ function InfoCapinha() {
 
     }
 
-     function favorito(item) {
-        var lista = fav;
+    function favorito(item) {
+        var lista = listaItem;
 
         lista.push(item)
         setFav(lista);
-        
+
         var count = true;
         setCar(count);
 
 
-       toast.success("Adicionado ao carrinho");
+        toast.success("Adicionado ao carrinho");
     }
+
+
 
 
 

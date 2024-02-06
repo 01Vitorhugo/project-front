@@ -13,11 +13,16 @@ function App() {
   const [setaScroll, setSetaScrollY] = useState(0);
 
   const { fav } = useContext(StateContext);
-  const [total, setTotal] = useState([]);
+  const [contador, setContador] = useState([]);
 
-   
+  contador.push(fav);
   
-    console.log(total, "totaL")
+  // if(fav ==! ''){
+  //   setContador.push(fav);
+  // }
+  console.log(contador, 'Contador');
+
+
 
 
 
@@ -46,7 +51,7 @@ function App() {
         </div>
 
         <div className='carrinho'>
-          <h1>{total.length}</h1>
+          <h1>{contador.length}</h1>
 
           <i class="fa fa-cart-shopping"></i>
         </div>
