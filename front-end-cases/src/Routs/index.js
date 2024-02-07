@@ -5,6 +5,8 @@ import NavPage from "../components/NavPage";
 import PageLogin from "../components/Login";
 import PageCadastro from "../components/Register";
 import InfoCapinha from "../components/InfoCapinhas";
+import Carrinho from "../components/Carrinho";
+
 
 function RoutsPage(){
 
@@ -17,6 +19,8 @@ function RoutsPage(){
                 <Route  path="/login" element={ <PageLogin/> }/>
                 <Route  path="/cadastro" element={ <PageCadastro/> }/>
                 <Route path="/infoCapinha" element={ <InfoCapinha/> } />
+                <Route path="/favoritos" element={ <Carrinho/> } />
+
             </Routes>
 
        </BrowserRouter>

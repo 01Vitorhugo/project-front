@@ -7,7 +7,7 @@ function StatesProvider({ children }) {
     const [log, setLog] = useState(false);
     const [fav, setFav] = useState([]);
 
-    console.log(fav);
+    // console.log(fav);
 
 
 

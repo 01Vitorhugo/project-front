@@ -4,23 +4,16 @@ import './app.css';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import { useState, useContext } from "react";
+import { useState} from "react";
 import { animateScroll as scroll } from 'react-scroll';
-import { StateContext } from "./ContextApi/states";
+// import { StateContext } from "./ContextApi/states";
+
 
 function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
 
-  const { fav } = useContext(StateContext);
-  const [contador, setContador] = useState([]);
-
-  contador.push(fav);
-  
-  // if(fav ==! ''){
-  //   setContador.push(fav);
-  // }
-  console.log(contador, 'Contador');
+  // const { fav } = useContext(StateContext);
 
 
 
@@ -51,9 +44,11 @@ function App() {
         </div>
 
         <div className='carrinho'>
-          <h1>{contador.length}</h1>
+          <h1>0</h1>
 
-          <i class="fa fa-cart-shopping"></i>
+          
+          <a href="favoritos"><i class="fa fa-cart-shopping"></i></a>
+
         </div>
 
 
