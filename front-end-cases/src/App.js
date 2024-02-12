@@ -13,14 +13,6 @@ function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
 
-
-
-
-
-
-
-
-
   function getScroll() {
     setSetaScrollY(window.scrollY);
   }
@@ -43,9 +35,7 @@ function App() {
         </div>
 
         <div className='carrinho'>
-
           <a href="favoritos"><i class="fa fa-cart-shopping"></i></a>
-
         </div>
 
 
