@@ -1,6 +1,58 @@
 .boxFavoritos{
-    background-color: aqua;
     margin-top: 100px;
-    width: 50%;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.boxFavoritos .itemLocal{
+    /* background-color: blue; */
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    width: 90%;
+
+     box-shadow: 1px 2px 12px -3px #ffff; 
+}
+.boxFavoritos .itemLocal h1{
+    text-align: left;
+    margin: 10px 20px;
+}
+.boxFavoritos .itemLocal #pag{
+    text-align: center;
+}
+.boxFavoritos .itemLocal .imgLocal{
+    /* background-color: aqua; */
+    height: 210px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.boxFavoritos .itemLocal .imgLocal img{
+    width: 200px;
+}
+.boxFavoritos .itemLocal h2{
+    text-align: center;
+    margin: 10px 10px;
+}
+.boxFavoritos .itemLocal p{
+    text-align: left;
+    margin: 5px 20px;
+    font-size: small;
+}
+.boxFavoritos .itemLocal button{
+    text-align: end;
+    margin: 5px 20px;
+    color: #af2323;
+}
+.boxFavoritos span{
+    color: #383bfa;
+    font-size: large;
 }

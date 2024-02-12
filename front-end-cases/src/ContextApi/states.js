@@ -5,9 +5,12 @@ export const StateContext = createContext({});
 function StatesProvider({ children }) {
 
     const [log, setLog] = useState(false);
-    const [fav, setFav] = useState([]);
+  
 
-    // console.log(fav);
+    
+    
+
+    //  console.log(fav);
 
 
 
@@ -56,7 +59,7 @@ function StatesProvider({ children }) {
 
 
     return (
-        <StateContext.Provider value={{ log, setLog, apiNovidade, apiParaVoce, itemCapinhaInfo, setItemCapinhaInfo, fav, setFav }}>
+        <StateContext.Provider value={{ log, setLog, apiNovidade, apiParaVoce, itemCapinhaInfo, setItemCapinhaInfo,}}>
             {children}
         </StateContext.Provider>
     )

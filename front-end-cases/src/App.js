@@ -6,14 +6,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { useState} from "react";
 import { animateScroll as scroll } from 'react-scroll';
-// import { StateContext } from "./ContextApi/states";
+
 
 
 function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
 
-  // const { fav } = useContext(StateContext);
 
 
 
@@ -44,9 +43,7 @@ function App() {
         </div>
 
         <div className='carrinho'>
-          <h1>0</h1>
 
-          
           <a href="favoritos"><i class="fa fa-cart-shopping"></i></a>
 
         </div>

@@ -1,27 +1,91 @@
+import { useEffect, useState } from 'react';
 import './carrinho.css'
-import { StateContext } from '../../ContextApi/states';
-import { useContext } from 'react';
+import { toast } from "react-toastify";
+
 
 function Carrinho() {
-    const { fav } = useContext(StateContext);
-    // console.log(fav);
+
+
+    const [pushItem, setPushItem] = useState([]);
+
+    useEffect(() => {
+
+        Atualizar();
+     
+
+    }, [])
+
+    function Atualizar() {
+
+        const item = localStorage.getItem("favoritos")
+        var itemConvertido = JSON.parse(item)
+
+
+        setPushItem(itemConvertido);
+
+    }
+
+
+    // console.log(pushItem);
+
+
+    function excluir(item) {
+
+
+        let i = pushItem.findIndex((p) => {
+            return p.id === item.id;
+        });
+
+        pushItem.splice(i, 1);
+
+        localStorage.setItem("favoritos", JSON.stringify(pushItem));
+
+         Atualizar();
+
+         toast.success("Excluido com sucesso");
+
+
+
+    }
+
+
+
+
 
 
     return (
         <div className='boxFavoritos'>
-            {fav.map((item) => {
-                return (
-                    <div className='boxItem' key={item.id}>
-                        <h1>{item.id}</h1>
-                        <figure>
-                            <img src={item.img} alt="img-produto" />
-                        </figure>
+            <h1>Você tem <span>{pushItem.length} itens</span> salvos !</h1>
 
-                    </div>
-                )
+            {
 
-            })
+                pushItem.map((item) => {
+                    return (
+                        <div key={item.id} className='itemLocal'>
+                            <h1>Id do protudo {item.id}</h1>
+                            <p id='pag'>{item.modelo}</p>
+
+                            <div className='imgLocal'>
+                                <img src={item.img} alt='Imagem do produto salvo' />
+                            </div>
+
+                            <h2>{item.valor} Reais</h2>
+                            <p>{item.desc}</p>
+                            <button onClick={() => excluir(item)}>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+
+                        </div>
+                    )
+
+                })
             }
+
+
+
+
+
+
         </div>
     )
 
