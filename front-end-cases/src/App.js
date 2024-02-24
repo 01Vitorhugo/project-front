@@ -4,7 +4,7 @@ import './app.css';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import { useState} from "react";
+import { useEffect, useState } from "react";
 import { animateScroll as scroll } from 'react-scroll';
 
 
@@ -12,6 +12,24 @@ import { animateScroll as scroll } from 'react-scroll';
 function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
+  const [valorLocalStorage, setValorLocalStorage] = useState([]);
+
+  useEffect(() => {
+    
+    ValueLocalStorage();
+
+  }, [])
+
+  function ValueLocalStorage() {
+
+    const valor = localStorage.getItem("favoritos");
+    var valorConvertido = JSON.parse(valor);
+
+    setValorLocalStorage(valorConvertido);
+
+  }
+
+  
 
   function getScroll() {
     setSetaScrollY(window.scrollY);
@@ -21,6 +39,13 @@ function App() {
   function GoTop() {
     scroll.scrollToTop();
   }
+
+
+
+  console.log(valorLocalStorage);
+
+
+
 
 
 
@@ -35,6 +60,7 @@ function App() {
         </div>
 
         <div className='carrinho'>
+          <p>{valorLocalStorage.length}</p>
           <a href="favoritos"><i class="fa fa-cart-shopping"></i></a>
         </div>
 

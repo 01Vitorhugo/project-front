@@ -56,6 +56,14 @@ body {
 
 
 }
+.carrinho p{
+    position: absolute;
+    bottom: 28px;
+    right: 25px;
+
+    color: #fff;
+    font-size: small;
+}
 
 .carrinho i{
     font-size: 15px;
