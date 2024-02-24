@@ -67,10 +67,6 @@ function HomePage() {
                 </p>
             </div>
 
-
-
-
-
         </div>
 
     )

@@ -7,14 +7,6 @@ function StatesProvider({ children }) {
     const [log, setLog] = useState(false);
   
 
-    
-    
-
-    //  console.log(fav);
-
-
-
-
 
     const [itemCapinhaInfo, setItemCapinhaInfo] = useState([
         { img: "https://www.biotecdermo.com.br/wp-content/uploads/2016/10/sem-imagem-10.jpg" }
@@ -25,7 +17,7 @@ function StatesProvider({ children }) {
     const [apiNovidade] = useState(
         [
             { id: 0, valor: 25, modelo: "Iphone --", img: "https://ai4k.shop/wp-content/uploads/2023/01/tough-iphone-case-glossy-iphone-13-pro-front-63d7931aa8d85.png", desc: "And expound the actual teachings of the great explorer of the truth, the master-builder of human happiness." },
-            { id: 1, valor: 25, modelo: "Iphone --", img: "https://desbraveofertas.com.br/cdn/shop/products/image-removebg-preview_800x.png?v=1696049637", desc: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system." },
+            { id: 1, valor: 25, modelo: "Iphone --", img: "https://dcdn.mitiendanube.com/stores/001/023/497/products/01112_iphxs-d09066e3bb0dd2be0615637596524678-1024-1024.png", desc: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system." },
             { id: 2, valor: 25, modelo: "Iphone --", img: "https://lakersalldayeveryday.com/cdn/shop/products/iphone-case-iphone-14-pro-max-case-on-phone-6376797bcec12_1024x1024@2x.png?v=1668708957", desc: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur." },
             { id: 3, valor: 25, modelo: "Iphone --", img: "https://heatwaveterrace.com/cdn/shop/products/iphone-case-iphone-11-pro-case-on-phone-6133ba31864bd_1024x1024@2x.png?v=1630779964", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut condimentum velit. In hac habitasse platea dictumst." },
             { id: 4, valor: 25, modelo: "Iphone --", img: "https://terribletiki.com/cdn/shop/products/iphone-case-iphone-11-pro-max-case-on-phone-6324cb41923c8_1024x1024@2x.png?v=1663355731", desc: "Adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem." },
@@ -46,7 +38,7 @@ function StatesProvider({ children }) {
         [
             { id: 14, valor: 35, modelo: "Iphone 13", img: "https://cdn.awsli.com.br/600x450/443/443889/produto/213100651/smiles-cdr_iphone-13-a604v235lg.png", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut condimentum velit. In hac habitasse platea dictumst." },
             { id: 15, valor: 25, modelo: "Iphone 13", img: "https://conteudos.meo.pt/catalogo/isell/acessorios/acessorios-iphone-13/capas-apple/capa-silicone-com-magsafe-para-iphone-13-preto-meia-noite-costas-meo.png", desc: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo." },
-            { id: 16, valor: 30, modelo: "Iphone 13", img: "https://ae01.alicdn.com/kf/S16dc0ea9f5ff4c88881bdbfca1ce066bJ.png_640x640.png_.webp", desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt." },
+            { id: 16, valor: 30, modelo: "Iphone 13", img: "https://www.emoticover.com.br/image/cache/catalog/namorados-12-1000x1000.png", desc: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt." },
             { id: 17, valor: 35, modelo: "Iphone 13", img: "https://www.gospelcase.com.br/image/cache/catalog/R165%20NOVA%20FRONT-1000x1000.png", desc: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet." },
             { id: 18, valor: 35, modelo: "Iphone 13 pro max", img: "https://cdn.awsli.com.br/600x450/443/443889/produto/213100654/smiles-cdr_iphone-13-pro-max-khtts6v4uk.png", desc: "Adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem." },
             { id: 19, valor: 35, modelo: "Iphone 13 pro max", img: "https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw3ece8d2b/images/large/52900017_1.png", desc: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur." },
