@@ -11,6 +11,8 @@ function Carrinho() {
     useEffect(() => {
 
         Atualizar();
+
+      
      
 
     }, [])
