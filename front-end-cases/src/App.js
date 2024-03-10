@@ -22,12 +22,12 @@ function App() {
 
   function ValueLocalStorage() {
 
-    const valor = localStorage.getItem("favoritos");
-    var valorConvertido = JSON.parse(valor);
+    const valor = JSON.parse(localStorage.getItem("favoritos"));
 
-    setValorLocalStorage(valorConvertido);
+    setValorLocalStorage(valor);
 
   }
+  // console.log(valorLocalStorage);
 
   
 
@@ -42,7 +42,7 @@ function App() {
 
 
 
-  console.log(valorLocalStorage);
+
 
 
 

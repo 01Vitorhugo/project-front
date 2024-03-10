@@ -1,6 +1,6 @@
 import './infoCapinha.css';
 import { StateContext } from '../../ContextApi/states';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { toast } from "react-toastify";
 
 function InfoCapinha() {
