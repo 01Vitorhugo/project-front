@@ -33,7 +33,7 @@ export default function PageCapinhas() {
                             <article>
 
                                 <p>{item.modelo}</p>
-                                <img src={item.img} alt='imagem capinhas' />
+                                <img src={item.img} alt='imagem capinhas' key={item.id}/>
                                 <h2>{item.valor} Reais</h2>
                             </article>
                         )
@@ -46,7 +46,7 @@ export default function PageCapinhas() {
                 {
                     capinhas.map((item) => {
                         return (
-                            <div className='itemCapinhas'>
+                            <div className='itemCapinhas' key={item.id}>
                                 <p>{item.modelo}</p>
                                 <img src={item.img} alt='imagem capinhas'/>
                                 <h1>{item.valor} reais</h1>
