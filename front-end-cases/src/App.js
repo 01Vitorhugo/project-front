@@ -43,7 +43,7 @@ function App() {
 
 
 
-  console.log(valorLocalStorage);
+  // console.log(valorLocalStorage);
 
 
 

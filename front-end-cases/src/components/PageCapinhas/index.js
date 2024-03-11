@@ -10,7 +10,7 @@ export default function PageCapinhas() {
 
 
     const elemento = capinhas.filter((item) => item.modelo === pesquisa)
-    console.log(elemento)
+    // console.log(elemento)
 
     return (
         <div className='capinhas'>
@@ -22,7 +22,7 @@ export default function PageCapinhas() {
                     onChange={(e) => setPesquisa(e.target.value)}
                 />
 
-                {pesquisa !== '' && <p>Itens Encontrados</p>}
+                {pesquisa !== '' && <p>Itens Encontrados {elemento.value}</p>  }
             </section>
 
 
