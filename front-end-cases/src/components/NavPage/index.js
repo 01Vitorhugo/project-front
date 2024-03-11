@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext, useState, useEffect } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
@@ -76,7 +77,7 @@ function NavPage() {
                         <div className='topics'>
                             <ul>
                                 <li>Carregadores</li>
-                                <li>Capinhas</li>
+                                <Link to='/capinhas'>Capinhas</Link>
                                 <li>Cabos</li>
                                 <li>Película</li>
                             </ul>

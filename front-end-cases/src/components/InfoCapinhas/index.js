@@ -1,3 +1,4 @@
+import React from "react";
 import './infoCapinha.css';
 import { StateContext } from '../../ContextApi/states';
 import { useContext, useEffect, useState } from 'react';

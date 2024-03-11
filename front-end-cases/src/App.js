@@ -1,3 +1,4 @@
+import React from "react";
 import StatesProvider from "./ContextApi/states";
 import RoutsPage from "./Routs";
 import './app.css';

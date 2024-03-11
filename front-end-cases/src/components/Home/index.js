@@ -1,3 +1,4 @@
+import React from "react";
 import './home.css';
 import { useEffect } from 'react';
 import { auth } from '../../BD-login';

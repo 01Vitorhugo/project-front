@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useContext } from 'react';
 import './cadastro.css';
 // import { Link } from 'react-router-dom';

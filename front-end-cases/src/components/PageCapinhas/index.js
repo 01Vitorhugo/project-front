@@ -1,8 +1,9 @@
+import React from "react";
 import { StateContext } from '../../ContextApi/states';
 import { useContext, useState } from 'react';
 import './pageCapinhas.css';
-export default function PageCapinhas() {
 
+export default function PageCapinhas() {
 
     const { capinhas } = useContext(StateContext);
     const [pesquisa, setPesquisa] = useState('');
