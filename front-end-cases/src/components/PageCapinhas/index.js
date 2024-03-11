@@ -31,7 +31,7 @@ export default function PageCapinhas() {
                 {
                     elemento.map((item) => {
                         return (
-                            <article>
+                            <article key={item.id}>
 
                                 <p>{item.modelo}</p>
                                 <img src={item.img} alt='imagem capinhas' key={item.id}/>
