@@ -1,10 +1,10 @@
 import React from "react";
 import './home.css';
-import { useEffect } from 'react';
-import { auth } from '../../BD-login';
-import { toast } from "react-toastify";
-import { Carousel } from 'flowbite-react';
-import { onAuthStateChanged } from "firebase/auth"
+// import { useEffect } from 'react';
+// import { auth } from '../../BD-login';
+// import { toast } from "react-toastify";
+ import { Carousel } from 'flowbite-react';
+// import { onAuthStateChanged } from "firebase/auth"
 import NovidadesHome from '../NovidadesHome';
 
 
@@ -15,20 +15,20 @@ function HomePage() {
 
 
 
-    useEffect(() => {
-        async function ObsUser() {
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    // setLog(true);
-                    toast.success("Você esta Online 😃");
-                } else {
-                    // setLog(false);
-                    toast.error("Você esta Ofline 😔");
-                }
-            })
-        }
-        ObsUser();
-    }, [])
+    // useEffect(() => {
+    //     async function ObsUser() {
+    //         onAuthStateChanged(auth, (user) => {
+    //             if (user) {
+    //                 // setLog(true);
+    //                 toast.success("Você esta Online 😃");
+    //             } else {
+    //                 // setLog(false);
+    //                 toast.error("Você esta Ofline 😔");
+    //             }
+    //         })
+    //     }
+    //     ObsUser();
+    // }, [])
 
 
 
