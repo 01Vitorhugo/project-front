@@ -28,12 +28,9 @@ function Carrinho() {
 
     }
 
-
     // console.log(pushItem);
 
-
     function excluir(item) {
-
 
         let i = pushItem.findIndex((p) => {
             return p.id === item.id;
@@ -43,22 +40,17 @@ function Carrinho() {
 
         localStorage.setItem("favoritos", JSON.stringify(pushItem));
 
+        
+
          Atualizar();
 
          toast.success("Excluido com sucesso");
 
-
-
     }
-
-
-
-
-
 
     return (
         <div className='boxFavoritos'>
-            <h1>Você tem <span>{pushItem.length} itens</span> salvos !</h1>
+            <h1>Você tem <span>{pushItem.length}itens</span> salvos !</h1>
 
             {
 

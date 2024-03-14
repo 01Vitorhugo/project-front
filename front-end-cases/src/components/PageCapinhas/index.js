@@ -22,7 +22,7 @@ export default function PageCapinhas() {
                     onChange={(e) => setPesquisa(e.target.value)}
                 />
 
-                {pesquisa !== '' && <p>Itens Encontrados {elemento.value}</p>  }
+                {pesquisa !== '' && <p>Itens Encontrados {elemento.value}</p>}
             </section>
 
 
@@ -34,7 +34,7 @@ export default function PageCapinhas() {
                             <article key={item.id}>
 
                                 <p>{item.modelo}</p>
-                                <img src={item.img} alt='imagem capinhas' key={item.id}/>
+                                <img src={item.img} alt='imagem capinhas' key={item.id} />
                                 <h2>{item.valor} Reais</h2>
                             </article>
                         )
@@ -49,7 +49,7 @@ export default function PageCapinhas() {
                         return (
                             <div className='itemCapinhas' key={item.id}>
                                 <p>{item.modelo}</p>
-                                <img src={item.img} alt='imagem capinhas'/>
+                                <img src={item.img} alt='imagem capinhas' />
                                 <h1>{item.valor} reais</h1>
                             </div>
 
