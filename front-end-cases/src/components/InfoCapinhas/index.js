@@ -10,11 +10,6 @@ function InfoCapinha() {
     const [car, setCar] = useState(false);
 
 
-
-
-
-
-
     function InspecionarItem(item) {
 
         setItemCapinhaInfo([item]);
@@ -50,13 +45,13 @@ function InfoCapinha() {
 
             {
                 itemCapinhaInfo.map((item) => {
-                    return (
-                        <div className='boxInfo' key={item.id}>
+                    return(
+                        <div className='boxInfo'   key={item.id}>
                             <div className='carrinhoProduto'>
 
                                 <button onClick={() => favorito(item)} >
 
-                                    {car > false
+                                    {car === false
 
                                         ? <i class="fa fa-heart" id="IconFav"></i>
                                         : <i class="fa fa-heart "></i>
@@ -78,8 +73,8 @@ function InfoCapinha() {
 
 
                         </div>
-                    )
 
+                    )
                 })
 
             }
@@ -93,8 +88,6 @@ function InfoCapinha() {
                 {
                     apiParaVoce.map((item) => {
                         return (
-
-
                             <div className='boxInfoNovidade' key={item.id}>
 
 
@@ -128,10 +121,7 @@ function InfoCapinha() {
                 {
                     apiNovidade.map((item) => {
                         return (
-
-
                             <div className='boxInfoNovidade' key={item.id}>
-
 
                                 <figure>
                                     <img src={item.img} alt="img-produto" />

@@ -29,11 +29,10 @@ function NovidadesHome() {
             <section>
                 {
                     apiNovidade.map((list) => {
-
-                        return (
+                        return(
                             <div className="conteudo" key={list.id}>
 
-                                <figure>
+                                <figure >
                                     <img src={list.img} alt="img-produto" />
                                 </figure>
                                 <h2>{list.valor} Reais</h2>
@@ -41,6 +40,7 @@ function NovidadesHome() {
                                 <button className='inspecionar' onClick={() => ItemNovidade(list)}><Link to="infoCapinha" >inspecionar</Link></button>
 
                             </div>
+
                         )
                     })
                 }

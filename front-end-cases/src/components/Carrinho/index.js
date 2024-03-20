@@ -8,14 +8,11 @@ function Carrinho() {
 
 
     const [pushItem, setPushItem] = useState([]);
+    console.log(pushItem)
 
     useEffect(() => {
 
         Atualizar();
-
-      
-     
-
     }, [])
 
     function Atualizar() {
@@ -28,8 +25,6 @@ function Carrinho() {
 
     }
 
-    // console.log(pushItem);
-
     function excluir(item) {
 
         let i = pushItem.findIndex((p) => {
@@ -40,23 +35,21 @@ function Carrinho() {
 
         localStorage.setItem("favoritos", JSON.stringify(pushItem));
 
-        
+        Atualizar();
 
-         Atualizar();
-
-         toast.success("Excluido com sucesso");
+        toast.success("Excluido com sucesso");
 
     }
 
     return (
         <div className='boxFavoritos'>
-            <h1>Você tem <span>{pushItem.length}itens</span> salvos !</h1>
+            {/* <h1>Você tem <span>{pushItem.length}itens</span> salvos !</h1> */}
 
             {
+                pushItem === ' ' ? <p>Nenhum item</p> : pushItem.map((item) => 
 
-                pushItem.map((item) => {
-                    return (
-                        <div key={item.id} className='itemLocal'>
+                     (
+                        <div className='itemLocal' key={item.id}>
                             <h1>Id do protudo {item.id}</h1>
                             <p id='pag'>{item.modelo}</p>
 
@@ -73,7 +66,7 @@ function Carrinho() {
                         </div>
                     )
 
-                })
+                )
             }
 
 

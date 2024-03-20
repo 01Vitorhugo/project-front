@@ -6,7 +6,7 @@ export const StateContext = createContext({});
 function StatesProvider({ children }) {
 
     const [log, setLog] = useState(false);
-  
+
 
 
     const [itemCapinhaInfo, setItemCapinhaInfo] = useState([
@@ -17,7 +17,7 @@ function StatesProvider({ children }) {
 
     const [apiNovidade] = useState(
         [
-            { id: 0, valor: 25, modelo: "Iphone 8 plus", img: "https://ai4k.shop/wp-content/uploads/2023/01/tough-iphone-case-glossy-iphone-13-pro-front-63d7931aa8d85.png", desc: "And expound the actual teachings of the great explorer of the truth, the master-builder of human happiness." },
+            { id: 90, valor: 25, modelo: "Iphone 8 plus", img: "https://ai4k.shop/wp-content/uploads/2023/01/tough-iphone-case-glossy-iphone-13-pro-front-63d7931aa8d85.png", desc: "And expound the actual teachings of the great explorer of the truth, the master-builder of human happiness." },
             { id: 1, valor: 25, modelo: "Iphone 8", img: "https://dcdn.mitiendanube.com/stores/001/023/497/products/01112_iphxs-d09066e3bb0dd2be0615637596524678-1024-1024.png", desc: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system." },
             { id: 2, valor: 25, modelo: "Iphone 15 pro max", img: "https://lakersalldayeveryday.com/cdn/shop/products/iphone-case-iphone-14-pro-max-case-on-phone-6376797bcec12_1024x1024@2x.png?v=1668708957", desc: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur." },
             { id: 3, valor: 25, modelo: "Iphone 15", img: "https://heatwaveterrace.com/cdn/shop/products/iphone-case-iphone-11-pro-case-on-phone-6133ba31864bd_1024x1024@2x.png?v=1630779964", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut condimentum velit. In hac habitasse platea dictumst." },
@@ -58,9 +58,9 @@ function StatesProvider({ children }) {
             { id: 18, valor: 35, modelo: "Iphone 13 pro max", img: "https://cdn.awsli.com.br/600x450/443/443889/produto/213100654/smiles-cdr_iphone-13-pro-max-khtts6v4uk.png", desc: "Adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem." },
             { id: 19, valor: 35, modelo: "Iphone 13 pro max", img: "https://www.rimowa.com/on/demandware.static/-/Sites-rimowa-master-catalog-final/default/dw3ece8d2b/images/large/52900017_1.png", desc: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur." },
             { id: 21, valor: 25, modelo: "Iphone 13 pro max", img: "https://cdn.vxcase.com.br/media/catalog/product/cache/854413d9c7f0b6ee978707af8ce198f7/c/a/capa-defender-vx-case-magsafe-iphone-13-pro---preta.png", desc: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur." },
-            { id: 22, valor: 25, modelo: "Iphone 12 pro ", img: "https://cdn.vxcase.com.br/media/amasty/webp/catalog/product/cache/854413d9c7f0b6ee978707af8ce198f7/2/5/25803-case-defender-preta_png.webp", desc: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system." },
-            { id: 23, valor: 30, modelo: "Iphone 12 pro ", img: "https://images.yampi.me/assets/stores/datelamps/uploads/images/capinha-iphone-astronauta-flutuante-roxo-iphone-14-636ee8b50c727-large.png", desc: "And expound the actual teachings of the great explorer of the truth, the master-builder of human happiness." },
-            { id: 0, valor: 25, modelo: "Iphone 8 plus", img: "https://ai4k.shop/wp-content/uploads/2023/01/tough-iphone-case-glossy-iphone-13-pro-front-63d7931aa8d85.png", desc: "And expound the actual teachings of the great explorer of the truth, the master-builder of human happiness." },
+            { id: 22, valor: 25, modelo: "Iphone 12 pro", img: "https://cdn.vxcase.com.br/media/amasty/webp/catalog/product/cache/854413d9c7f0b6ee978707af8ce198f7/2/5/25803-case-defender-preta_png.webp", desc: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system." },
+            { id: 23, valor: 30, modelo: "Iphone 12 pro", img: "https://images.yampi.me/assets/stores/datelamps/uploads/images/capinha-iphone-astronauta-flutuante-roxo-iphone-14-636ee8b50c727-large.png", desc: "And expound the actual teachings of the great explorer of the truth, the master-builder of human happiness." },
+            { id: 90, valor: 25, modelo: "Iphone 8 plus", img: "https://ai4k.shop/wp-content/uploads/2023/01/tough-iphone-case-glossy-iphone-13-pro-front-63d7931aa8d85.png", desc: "And expound the actual teachings of the great explorer of the truth, the master-builder of human happiness." },
             { id: 1, valor: 25, modelo: "Iphone 8", img: "https://dcdn.mitiendanube.com/stores/001/023/497/products/01112_iphxs-d09066e3bb0dd2be0615637596524678-1024-1024.png", desc: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system." },
             { id: 2, valor: 25, modelo: "Iphone 15 pro max", img: "https://lakersalldayeveryday.com/cdn/shop/products/iphone-case-iphone-14-pro-max-case-on-phone-6376797bcec12_1024x1024@2x.png?v=1668708957", desc: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur." },
             { id: 3, valor: 25, modelo: "Iphone 15", img: "https://heatwaveterrace.com/cdn/shop/products/iphone-case-iphone-11-pro-case-on-phone-6133ba31864bd_1024x1024@2x.png?v=1630779964", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut condimentum velit. In hac habitasse platea dictumst." },
@@ -74,7 +74,7 @@ function StatesProvider({ children }) {
             { id: 11, valor: 25, modelo: "Iphone 11", img: "https://images.dailyobjects.com/marche/product-images/1101/dailyobjects-spider-whisperer-stride-2-0-case-cover-for-iphone-15-pro-max-images/DailyObjects-Spider-Whisperer-Stride-2-0-Case-Cover-For-iPhone-15-Pro-Max.png?tr=cm-pad_resize,v-2,w-412,h-490,dpr-2,q-60", desc: "And expound the actual teachings of the great explorer of the truth, the master-builder of human happiness." },
             { id: 12, valor: 25, modelo: "Iphone 11", img: "https://cdn-stamplib.casetify.com/cms/image/5142c13dea691d817ce456ed811edece.png", desc: "Adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.", },
             { id: 13, valor: 25, modelo: "Iphone 11 pro", img: "https://cdn-stamplib.casetify.com/cms/image/bf13209c13b5eb14bb1824f5e7a887a3.png", desc: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system." },
-            
+
 
         ]
     )
@@ -82,7 +82,7 @@ function StatesProvider({ children }) {
 
 
     return (
-        <StateContext.Provider value={{ log, setLog, apiNovidade, apiParaVoce, itemCapinhaInfo, setItemCapinhaInfo, capinhas}}>
+        <StateContext.Provider value={{ log, setLog, apiNovidade, apiParaVoce, itemCapinhaInfo, setItemCapinhaInfo, capinhas }}>
             {children}
         </StateContext.Provider>
     )

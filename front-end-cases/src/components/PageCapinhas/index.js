@@ -8,9 +8,9 @@ export default function PageCapinhas() {
     const { capinhas } = useContext(StateContext);
     const [pesquisa, setPesquisa] = useState('');
 
-
     const elemento = capinhas.filter((item) => item.modelo === pesquisa)
-    // console.log(elemento)
+
+   
 
     return (
         <div className='capinhas'>
@@ -22,40 +22,35 @@ export default function PageCapinhas() {
                     onChange={(e) => setPesquisa(e.target.value)}
                 />
 
-                {pesquisa !== '' && <p>Itens Encontrados {elemento.value}</p>}
+                {pesquisa !== '' && <p>Itens Encontrados {elemento.length}</p>} 
             </section>
 
 
 
             <div className='itemPesquisa'>
-                {
-                    elemento.map((item) => {
-                        return (
-                            <article key={item.id}>
-
-                                <p>{item.modelo}</p>
-                                <img src={item.img} alt='imagem capinhas' key={item.id} />
-                                <h2>{item.valor} Reais</h2>
-                            </article>
-                        )
-                    })
-                }
+                {elemento.map((item) => {
+                    return (
+                        <article key={item.id}>
+                            <p>{item.modelo}</p>
+                            <img src={item.img} alt='imagem capinhas' />
+                            <h2>{item.valor} Reais</h2>
+                        </article>
+                    )
+                })}
 
             </div>
 
             <main>
-                {
-                    capinhas.map((item) => {
-                        return (
-                            <div className='itemCapinhas' key={item.id}>
-                                <p>{item.modelo}</p>
-                                <img src={item.img} alt='imagem capinhas' />
-                                <h1>{item.valor} reais</h1>
-                            </div>
+                {capinhas.map((item) => {
+                    return (
 
-                        )
-                    })
-                }
+                        <div className='itemCapinhas' key={item.id}>
+                            <p>{item.modelo}</p>
+                            <img src={item.img} alt='imagem capinhas' />
+                            <h1>{item.valor} reais</h1>
+                        </div>
+                    )
+                })}
             </main>
 
         </div>
