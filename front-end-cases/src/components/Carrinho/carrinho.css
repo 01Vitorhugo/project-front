@@ -66,3 +66,28 @@
     color: #383bfa;
     font-size: large;
 }
+
+.boxFavoritos .itemLocal section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    height: 40px;
+    
+}
+.boxFavoritos .itemLocal section button{
+    background-color: #01c929;
+    color: #fff;
+
+    width: 50%;
+    height: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+}

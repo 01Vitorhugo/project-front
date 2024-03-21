@@ -1,6 +1,7 @@
 import React from "react";
 import './home.css';
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
+import { StateContext } from '../../ContextApi/states';
 import { auth } from '../../BD-login';
 import { toast } from "react-toastify";
 import { Carousel } from 'flowbite-react';
@@ -11,18 +12,16 @@ import NovidadesHome from '../NovidadesHome';
 
 function HomePage() {
 
-
-
-
+    const { setLog } = useContext(StateContext);
 
     useEffect(() => {
         async function ObsUser() {
             onAuthStateChanged(auth, (user) => {
                 if (user) {
-                    // setLog(true);
+                    setLog(true);
                     toast.success("Você esta Online 😃");
                 } else {
-                    // setLog(false);
+                    setLog(false);
                     toast.error("Você esta Ofline 😔");
                 }
             })

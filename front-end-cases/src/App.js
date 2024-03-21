@@ -15,6 +15,13 @@ function App() {
   const [setaScroll, setSetaScrollY] = useState(0);
   const [valorLocalStorage, setValorLocalStorage] = useState([]);
 
+  if( valorLocalStorage=== undefined){
+    setValorLocalStorage(0);
+  }
+  // console.log(valorLocalStorage)
+
+  
+
   useEffect(() => {
     
     ValueLocalStorage();
@@ -42,9 +49,6 @@ function App() {
   }
 
 
-
-  // console.log(valorLocalStorage);
-
   return (
     <StatesProvider>
       <div className="App">
@@ -56,7 +60,7 @@ function App() {
         </div>
 
         <div className='carrinho'>
-          {/* <p>{valorLocalStorage.length}</p>  */}
+          <p>{valorLocalStorage.length}</p> 
           <a href="favoritos"><i class="fa fa-cart-shopping"></i></a>
         </div>
 

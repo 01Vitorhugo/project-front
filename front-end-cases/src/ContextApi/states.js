@@ -1,11 +1,13 @@
 import React from "react";
 import { createContext, useState } from "react";
 
+
 export const StateContext = createContext({});
 
 function StatesProvider({ children }) {
 
     const [log, setLog] = useState(false);
+    // console.log(log)
 
 
 

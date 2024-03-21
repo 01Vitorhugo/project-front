@@ -1,17 +1,20 @@
 import React from "react";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import './carrinho.css'
 import { toast } from "react-toastify";
+import { StateContext } from '../../ContextApi/states';
 
 
 function Carrinho() {
 
+    const { log } = useContext(StateContext);
 
     const [pushItem, setPushItem] = useState([]);
-    console.log(pushItem)
+    const [compra, setCompra] = useState(false);
+    // console.log(compra)
 
     useEffect(() => {
-
+        
         Atualizar();
     }, [])
 
@@ -41,38 +44,55 @@ function Carrinho() {
 
     }
 
+    function Compra(item) {
+        setCompra(true);
+
+        if (compra === true && log === true) {
+            // console.log('olaaa')
+            window.location.href = "/capinhas";
+            
+        }else if(compra === false && log === false) {
+            window.location.href = "/login";
+            
+        }
+
+    }
+
+
+
+
     return (
+
         <div className='boxFavoritos'>
-            {/* <h1>Você tem <span>{pushItem.length}itens</span> salvos !</h1> */}
+            <h1>Você tem <span>{pushItem.length}itens</span> salvos !</h1>
 
             {
-                pushItem === ' ' ? <p>Nenhum item</p> : pushItem.map((item) => 
+                pushItem === ' ' ? <p>Nenhum item</p> : pushItem.map((item) =>
 
-                     (
-                        <div className='itemLocal' key={item.id}>
-                            <h1>Id do protudo {item.id}</h1>
-                            <p id='pag'>{item.modelo}</p>
+                (
+                    <div className='itemLocal' key={item.id}>
+                        <h1>Id do protudo {item.id}</h1>
+                        <p id='pag'>{item.modelo}</p>
 
-                            <div className='imgLocal'>
-                                <img src={item.img} alt='Imagem do produto salvo' />
-                            </div>
-
-                            <h2>{item.valor} Reais</h2>
-                            <p>{item.desc}</p>
-                            <button onClick={() => excluir(item)}>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </button>
-
+                        <div className='imgLocal'>
+                            <img src={item.img} alt='Imagem do produto salvo' />
                         </div>
-                    )
+
+                        <h2>{item.valor} Reais</h2>
+                        <p>{item.desc}</p>
+                        <button onClick={() => excluir(item)}>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+
+                        <section>
+                            <button onClick={() => Compra(item)}>Comprar</button>
+                        </section>
+
+                    </div>
+                )
 
                 )
             }
-
-
-
-
-
 
         </div>
     )
