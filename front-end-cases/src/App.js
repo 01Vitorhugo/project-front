@@ -13,31 +13,28 @@ import { animateScroll as scroll } from 'react-scroll';
 function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
-  const [valorLocalStorage, setValorLocalStorage] = useState([]);
+  // const [valorLocalStorage, setValorLocalStorage] = useState([]);
 
-  if( valorLocalStorage=== undefined){
-    setValorLocalStorage(0);
-  }
   // console.log(valorLocalStorage)
 
-  
+
 
   useEffect(() => {
-    
-    ValueLocalStorage();
+
+    // function ValueLocalStorage() {
+
+    //   const valor = localStorage.getItem("favoritos");
+    //   var valorConvertido = JSON.parse(valor);
+
+    //   setValorLocalStorage(valorConvertido);
+
+    // }
+    // ValueLocalStorage();
 
   }, [])
 
-  function ValueLocalStorage() {
 
-    const valor = localStorage.getItem("favoritos");
-    var valorConvertido = JSON.parse(valor);
 
-    setValorLocalStorage(valorConvertido);
-
-  }
-
-  
 
   function getScroll() {
     setSetaScrollY(window.scrollY);
@@ -60,7 +57,6 @@ function App() {
         </div>
 
         <div className='carrinho'>
-          <p>{valorLocalStorage.length}</p> 
           <a href="favoritos"><i class="fa fa-cart-shopping"></i></a>
         </div>
 
