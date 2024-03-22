@@ -44,12 +44,11 @@ function Carrinho() {
 
     }
 
-    function Compra(item) {
+    function Compra() {
         setCompra(true);
 
         if (compra === true && log === true) {
-            // console.log('olaaa')
-            window.location.href = "/capinhas";
+            window.location.href = "/finalizarCompra";
             
         }else if(compra === false && log === false) {
             window.location.href = "/login";
@@ -85,7 +84,7 @@ function Carrinho() {
                         </button>
 
                         <section>
-                            <button onClick={() => Compra(item)}>Comprar</button>
+                            <button onClick={() => Compra()}>Comprar</button>
                         </section>
 
                     </div>
