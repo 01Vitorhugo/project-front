@@ -7,6 +7,7 @@ import PageCadastro from "../components/Register";
 import InfoCapinha from "../components/InfoCapinhas";
 import Carrinho from "../components/Carrinho";
 import PageCapinhas from "../components/PageCapinhas";
+import FinalizarCompra from "../components/PageFinalizarCompra";
 
 
 function RoutsPage(){
@@ -22,6 +23,7 @@ function RoutsPage(){
                 <Route path="/infoCapinha" element={ <InfoCapinha/> } />
                 <Route path="/favoritos" element={ <Carrinho/> } />
                 <Route path="/capinhas" element={ <PageCapinhas/> } />
+                <Route path="/finalizarCompra" element={ <FinalizarCompra/> } />
 
             </Routes>
 
