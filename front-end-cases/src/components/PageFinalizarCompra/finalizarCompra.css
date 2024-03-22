@@ -1,0 +1,27 @@
+.finalizarCompra{
+    margin-top: 140px;
+}
+.finalizarCompra form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 10px;
+}
+.finalizarCompra form p{
+    color: #01c929;
+    
+}
+.finalizarCompra form label{
+    color: #fff;
+    font-size: large;
+}
+
+.finalizarCompra form button{
+    margin-top: 60px;
+    color: #fff;
+    background-color: rgb(78, 117, 19);
+    height: 40px;
+    width: 200px;
+}
