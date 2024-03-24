@@ -25,3 +25,14 @@
     height: 40px;
     width: 200px;
 }
+.finalizarCompra form .campo_endereco{
+    border: 0;
+    background-color: transparent;
+    color: #14870C;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.finalizarCompra form .disable_none{
+    display: none;
+}
