@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import './finalizarCompra.css';
+import emailjs from '@emailjs/browser';
+import { toast } from "react-toastify";
 
 
 export default function FinalizarCompra() {
+    const [name, setName] = useState('');
     const [cep, setCep] = useState('');
     const [rua, setRua] = useState('')
     const [estado, setEstado] = useState('')
@@ -18,7 +21,7 @@ export default function FinalizarCompra() {
         fetch(`https://viacep.com.br/ws/${cep}/json/`)
             .then(res => res.json()).then(data => {
                 // console.log(data)
-                
+
                 setEstado(data.localidade);
                 setRua(data.logradouro)
                 setBairro(data.bairro)
@@ -27,10 +30,56 @@ export default function FinalizarCompra() {
             })
     }
 
+    function enviarFormulario(e) {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('emailVitor', 'templateVitor', e.target, {
+                publicKey: 'vl1NwiDuhehOggGLw',
+            })
+            .then(
+                () => {
+                    setName('')
+                    setCep('')
+                    setNumero('')
+                    setComplemento('')
+
+                    setEstado('');
+                    setRua('')
+                    setBairro('')
+                    setUf('')
+
+                    toast.success("Compra realizada com sucesso");
+
+                     setInterval(()=> {
+                        window.location.href = "/";
+                    }, 2000);
+                    
+                },
+                
+
+                () => {
+                    toast.error("Compra negada");
+                },
+            );
+
+
+    }
+
     return (
         <div className='finalizarCompra'>
-            <form>
+
+            <form onSubmit={enviarFormulario}>
                 <label>Verificar endereço</label>
+
+                <input type='text'
+                    placeholder='Digite seu nome'
+                    name='name'
+                    required
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                />
+
                 <input type='text'
                     placeholder='Digite seu CEP'
                     required
@@ -38,32 +87,56 @@ export default function FinalizarCompra() {
                     onChange={e => setCep(e.target.value)}
                     onBlur={checarCEP}
                 />
+
                 <input type='text'
                     placeholder='Digite o Número'
+                    name='numero'
                     required
                     value={numero}
                     onChange={e => setNumero(e.target.value)}
 
                 />
+
                 <input type='text'
                     placeholder='Digite o complemento'
+                    name='complemento'
                     value={complemento}
                     onChange={e => setComplemento(e.target.value)}
 
                 />
 
+                {/* inputs desabilitados para puxar no email e nao aparecer para o usuario */}
+                <input type='text' className='disable_none'
+                    name='rua'
+                    value={rua}
+                    onChange={e => setRua(e.target.value)}
+                />
+
+                <input type='text' className='disable_none'
+                    name='estado'
+                    value={estado}
+                    onChange={e => setEstado(e.target.value)}
+                />
+
+                <input  type='text' className='disable_none'
+                    name='uf'
+                    value={uf}
+                    onChange={e => setUf(e.target.value)}
+                />
+
+
                 {
                     rua && estado && bairro !== '' &&
-                        <>
-                            <p><strong>Rua:</strong> {rua}  {numero}</p>
-                            <p><strong>Estado:</strong> {estado} {uf} </p>
-                            <p><strong>Bairro:</strong> {bairro}</p>
-                            <p><strong>Complemento:</strong> {complemento}</p>
-                        </>
-                }
-               
+                    <div className='campo_endereco'>
+                        <p>{rua} {numero}</p>
+                        <p>{complemento}</p>
+                        <p>{estado}, {uf}</p>
 
-                {numero !== '' && cep.length === 8   ?<button>Finalizar Compra</button>  : <button>Pesquisar Cep</button>  }
+                    </div>
+                       
+                }
+
+                {numero !== '' && cep.length === 8 ? <button type='submit'>Finalizar Compra</button> : <button>Pesquisar Cep</button>}
             </form>
 
 
