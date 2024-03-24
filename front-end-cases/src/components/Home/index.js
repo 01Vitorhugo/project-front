@@ -18,16 +18,19 @@ function HomePage() {
         async function ObsUser() {
             onAuthStateChanged(auth, (user) => {
                 if (user) {
+
                     setLog(true);
                     toast.success("Você esta Online 😃");
+
                 } else {
+                    
                     setLog(false);
                     toast.error("Você esta Ofline 😔");
                 }
             })
         }
         ObsUser();
-    }, [])
+    }, [setLog])
 
 
 
