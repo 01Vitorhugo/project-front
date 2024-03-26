@@ -14,7 +14,7 @@ function PageLogin( ) {
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
 
-    const {log, setLog} = useContext(StateContext);
+    const {setLog} = useContext(StateContext);
     
 
     async function Logar() {
@@ -24,6 +24,10 @@ function PageLogin( ) {
                 setEmail('');
                 setSenha('');
                 setLog(true);
+
+                setInterval(()=> {
+                    window.location.href = "/";
+                }, 600);
             })
             .catch(() => {
                 toast.error("Erro ao fazer login");
@@ -32,20 +36,6 @@ function PageLogin( ) {
 
            
     }
-
-    if(log === true){
-     
-        return(
-            <div className='online'>
-                
-                <button> <Link to="/">Home</Link> </button>
-
-            </div>
-        )
-
-
-    }
-
    
     return (
         <div className="login">

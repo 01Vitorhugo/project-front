@@ -6,33 +6,36 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { useEffect, useState } from "react";
-import { animateScroll as scroll } from 'react-scroll'; 
+import { animateScroll as scroll } from 'react-scroll';
+
+import { onAuthStateChanged } from "firebase/auth"
+import { auth } from '../src/BD-login';
 
 
 
 function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
-  // const [valorLocalStorage, setValorLocalStorage] = useState([]);
 
-  // console.log(valorLocalStorage)
+  const [log, setLog] = useState(false)
+  const [of, setOf] = useState(true);
 
-
+ 
 
   useEffect(() => {
-
-    // function ValueLocalStorage() {
-
-    //   const valor = localStorage.getItem("favoritos");
-    //   var valorConvertido = JSON.parse(valor);
-
-    //   setValorLocalStorage(valorConvertido);
-
-    // }
-    // ValueLocalStorage();
-
+    async function ObsUser() {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          setLog(true)
+          
+        } else {
+          setOf(false)
+       
+        }
+      })
+    }
+    ObsUser();
   }, [])
-
 
 
 
