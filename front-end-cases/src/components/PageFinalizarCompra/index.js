@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './finalizarCompra.css';
 import emailjs from '@emailjs/browser';
 import { toast } from "react-toastify";
@@ -14,6 +14,26 @@ export default function FinalizarCompra() {
     const [numero, setNumero] = useState('')
     const [complemento, setComplemento] = useState('')
 
+    const [clienteCompra, setClienteCompra] = useState([]);
+
+
+    useEffect(() => {
+        ItemCompraCli();
+
+    }, [])
+
+    function ItemCompraCli() {
+
+
+        const compraCli = localStorage.getItem("itemCompra")
+        var itemConvertidoCli = JSON.parse(compraCli)
+
+        setClienteCompra([itemConvertidoCli]);
+    }
+
+
+
+    // console.log(clienteCompra);
 
     const checarCEP = (e) => {
         const cep = e.target.value.replace(/\D/g, '');
@@ -51,12 +71,12 @@ export default function FinalizarCompra() {
 
                     toast.success("Compra realizada com sucesso");
 
-                     setInterval(()=> {
+                    setInterval(() => {
                         window.location.href = "/";
                     }, 2000);
-                    
+
                 },
-                
+
 
                 () => {
                     toast.error("Compra negada");
@@ -65,6 +85,7 @@ export default function FinalizarCompra() {
 
 
     }
+
 
     return (
         <div className='finalizarCompra'>
@@ -118,7 +139,7 @@ export default function FinalizarCompra() {
                     onChange={e => setEstado(e.target.value)}
                 />
 
-                <input  type='text' className='disable_none'
+                <input type='text' className='disable_none'
                     name='uf'
                     value={uf}
                     onChange={e => setUf(e.target.value)}
@@ -133,11 +154,27 @@ export default function FinalizarCompra() {
                         <p>{estado}, {uf}</p>
 
                     </div>
-                       
+
                 }
 
                 {numero !== '' && cep.length === 8 ? <button type='submit'>Finalizar Compra</button> : <button>Pesquisar Cep</button>}
             </form>
+
+            <div className='itemCompraFinal'>
+                {
+                    clienteCompra.map((item) => {
+                        return (
+                            <>
+                                <h1>Você esta comprando <span>{item.modelo}</span></h1>
+                                <img src={item.img} alt='Imagem do produto salvo' />
+                            </>
+                        )
+                    })
+
+                }
+
+
+            </div>
 
 
 
