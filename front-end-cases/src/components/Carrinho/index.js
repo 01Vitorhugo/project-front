@@ -11,7 +11,7 @@ function Carrinho() {
 
     const [pushItem, setPushItem] = useState([]);
     const [compra, setCompra] = useState(false);
-    // console.log(compra)
+    
 
     useEffect(() => {
         
@@ -22,7 +22,6 @@ function Carrinho() {
 
         const item = localStorage.getItem("favoritos")
         var itemConvertido = JSON.parse(item)
-
 
         setPushItem(itemConvertido);
 
@@ -44,12 +43,16 @@ function Carrinho() {
 
     }
 
-    function Compra() {
+    function Compra(item) {
         setCompra(true);
 
-        if (compra === true && log === true) {
+        let objCompra = item;
+        localStorage.setItem("itemCompra", JSON.stringify(objCompra));
+       
+        if (compra === true && log === true) {   
             window.location.href = "/finalizarCompra";
             
+
         }else if(compra === false && log === false) {
             window.location.href = "/login";
             
@@ -84,7 +87,7 @@ function Carrinho() {
                         </button>
 
                         <section>
-                            <button onClick={() => Compra()}>Comprar</button>
+                            <button onClick={() => Compra(item)}>Comprar</button>
                         </section>
 
                     </div>
