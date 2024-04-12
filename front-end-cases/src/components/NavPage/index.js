@@ -31,7 +31,7 @@ function NavPage() {
 
     useEffect(() => {
         async function ObsUser() {
-           onAuthStateChanged(auth, (user) => {
+            onAuthStateChanged(auth, (user) => {
                 if (user) {
                     setLog(true);
                 } else {
@@ -76,8 +76,9 @@ function NavPage() {
 
                         <div className='topics'>
                             <ul>
-                                <li>Carregadores</li>
-                                <Link to='/capinhas'>Capinhas</Link>
+
+                                <li><Link to='/carregadores'>Carregadores</Link></li>
+                                <li><Link to='/capinhas'>Capinhas</Link></li>
                                 <li>Cabos</li>
                                 <li>Película</li>
                             </ul>
