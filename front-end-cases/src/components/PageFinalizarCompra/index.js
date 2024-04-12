@@ -31,8 +31,6 @@ export default function FinalizarCompra() {
         setClienteCompra([itemConvertidoCli]);
     }
 
-
-
     // console.log(clienteCompra);
 
     const checarCEP = (e) => {
