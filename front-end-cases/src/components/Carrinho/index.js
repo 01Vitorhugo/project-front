@@ -7,10 +7,10 @@ import { StateContext } from '../../ContextApi/states';
 
 function Carrinho() {
 
-    const { log } = useContext(StateContext);
+    const { log, compra, setCompra } = useContext(StateContext);
 
     const [pushItem, setPushItem] = useState([]);
-    const [compra, setCompra] = useState(false);
+
     
 
     useEffect(() => {
@@ -66,7 +66,7 @@ function Carrinho() {
     return (
 
         <div className='boxFavoritos'>
-            <h1>Você tem <span>{pushItem.length}itens</span> salvos !</h1>
+            <h1>Você tem <span>{pushItem.length} itens</span> salvos !</h1>
 
             {
                 pushItem === ' ' ? <p>Nenhum item</p> : pushItem.map((item) =>
