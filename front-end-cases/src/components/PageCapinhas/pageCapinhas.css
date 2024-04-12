@@ -13,7 +13,8 @@
     flex-direction: column;
     gap: 10px;
 }
-.capinhas section p{
+
+.capinhas section p {
     color: #fff;
 }
 
@@ -49,7 +50,7 @@
     align-items: center;
     flex-direction: column;
 
-    height: 250px;
+    height: 300px;
     width: 200px;
     background: rgba(36, 36, 36);
     box-shadow: 0px 4px 100px 0px #000 inset;
@@ -60,6 +61,19 @@
 
 .capinhas .itemPesquisa article img {
     height: 150px;
+}
+
+.capinhas .itemPesquisa article button {
+    background-color: #01c929;
+    color: #fff;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    margin-top: 10px;
 }
 
 .capinhas main {
@@ -74,7 +88,8 @@
     justify-content: center;
 
 }
-.capinhas main .itemCapinhas{
+
+.capinhas main .itemCapinhas {
     width: 170px;
     height: 270px;
     background: rgba(36, 36, 36);
@@ -84,20 +99,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
+    flex-direction: column;
 
     overflow: hidden;
 
 }
-.capinhas main .itemCapinhas img{
+
+.capinhas main .itemCapinhas img {
     height: 120px;
     width: 120px;
 }
-.capinhas main .itemCapinhas p{
+
+.capinhas main .itemCapinhas p {
     font-size: medium;
     margin-bottom: 15px;
 }
-.capinhas main .itemCapinhas h1{
+
+.capinhas main .itemCapinhas h1 {
     font-size: medium;
     margin-top: 15px;
+}
+.capinhas main .itemCapinhas button {
+    background-color: #01c929;
+    color: #fff;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    margin-top: 10px;
 }
