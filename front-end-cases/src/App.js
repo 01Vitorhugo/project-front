@@ -5,37 +5,15 @@ import './app.css';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { animateScroll as scroll } from 'react-scroll';
 
-import { onAuthStateChanged } from "firebase/auth"
-import { auth } from '../src/BD-login';
 
 
 
 function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
-
-  const [log, setLog] = useState(false)
-  const [of, setOf] = useState(true);
-
- 
-
-  useEffect(() => {
-    async function ObsUser() {
-      onAuthStateChanged(auth, (user) => {
-        if (user) {
-          setLog(true)
-          
-        } else {
-          setOf(false)
-       
-        }
-      })
-    }
-    ObsUser();
-  }, [])
 
 
 

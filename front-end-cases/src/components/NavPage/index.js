@@ -1,19 +1,13 @@
 import React from "react";
-import { useContext, useState, useEffect } from 'react';
+import {  useState } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
-import { StateContext } from '../../ContextApi/states';
-import { signOut } from 'firebase/auth';
-import { auth } from '../../BD-login';
-import { onAuthStateChanged } from "firebase/auth"
-
 
 
 function NavPage() {
 
     const [nav, setNav] = useState(false);
 
-    const { log, setLog } = useContext(StateContext);
 
     function NavInfo() {
         setNav(true);
@@ -23,24 +17,7 @@ function NavPage() {
         setNav(false);
     }
 
-    async function Logof() {
-        await signOut(auth);
-        setLog(false);
 
-    }
-
-    useEffect(() => {
-        async function ObsUser() {
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    setLog(true);
-                } else {
-                    setLog(false);
-                }
-            })
-        }
-        ObsUser();
-    }, [setLog])
 
 
     return (
@@ -82,10 +59,6 @@ function NavPage() {
                                 <li>Cabos</li>
                                 <li>Película</li>
                             </ul>
-                            <div className='login'>
-                                {log === true ? <button onClick={Logof}>Sair</button> : <button onClick={VoltaNav}><Link to='/login'>Login</Link></button>}
-
-                            </div>
 
                         </div>
                     </div>

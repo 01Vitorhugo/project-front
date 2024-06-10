@@ -6,7 +6,6 @@ export const StateContext = createContext({});
 
 function StatesProvider({ children }) {
 
-    const [log, setLog] = useState(false);
     const [compra, setCompra] = useState(false);
     // console.log(log)
 
@@ -70,7 +69,7 @@ function StatesProvider({ children }) {
 
 
     return (
-        <StateContext.Provider value={{ log, setLog, apiNovidade, apiParaVoce, itemCapinhaInfo, setItemCapinhaInfo, capinhas, compra, setCompra, apiCarregador }}>
+        <StateContext.Provider value={{ apiNovidade, apiParaVoce, itemCapinhaInfo, setItemCapinhaInfo, capinhas, compra, setCompra, apiCarregador }}>
             {children}
         </StateContext.Provider>
     )
