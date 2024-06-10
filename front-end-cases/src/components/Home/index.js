@@ -2,6 +2,7 @@ import React from "react";
 import './home.css';
 import { Carousel } from 'flowbite-react';
 import NovidadesHome from '../NovidadesHome';
+import ProdutosHome from "../ProdutosHome";
 
 
 
@@ -36,6 +37,8 @@ function HomePage() {
             </div>
 
             <NovidadesHome />
+
+            <ProdutosHome />
 
             <div className="infoHome">
                 <i className="fab fa-instagram"></i>

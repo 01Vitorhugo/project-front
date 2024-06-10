@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 function InfoCapinha() {
 
-    const { itemCapinhaInfo, setItemCapinhaInfo, apiParaVoce, apiNovidade} = useContext(StateContext);
+    const { itemCapinhaInfo, setItemCapinhaInfo, apiParaVoce, produtos} = useContext(StateContext);
     const [car, setCar] = useState(false);
 
 
@@ -25,21 +25,14 @@ function InfoCapinha() {
        
         localStorage.setItem("favoritos", JSON.stringify(itemSalvos));
 
-        
 
         var count = true;
         setCar(count);
-
 
         toast.success("Adicionado ao carrinho");
     }
 
     
-
-
-
-
-
     return (
         <div className="infoCapinha">
 
@@ -107,19 +100,10 @@ function InfoCapinha() {
                 }
             </section>
 
-            <div className="title">
-
-                <h1>Outros</h1>
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8" viewBox="0 0 15 8" fill="none">
-                    <path d="M2.8125 0L0 2.04545L7.5 7.5L15 2.04545L12.1875 0L7.5 3.40909L2.8125 0Z" fill="white" />
-                </svg>
-
-            </div>
 
             <section>
                 {
-                    apiNovidade.map((item) => {
+                    produtos.map((item) => {
                         return (
                             <div className='boxInfoNovidade' key={item.id}>
 

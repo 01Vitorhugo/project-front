@@ -1,0 +1,57 @@
+.PageCarregador main{
+    height: auto;
+    width: 100%;
+    margin-top: 130px;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 5px;
+
+    justify-content: center;
+  
+
+}
+
+.PageCarregador main .itemCarregador {
+    width: 400px;
+    max-width: 90%;
+    height: 290px;
+    background: rgba(36, 36, 36);
+    box-shadow: 0px 4px 100px 0px #000 inset;
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    overflow: hidden;
+
+}
+
+.PageCarregador main .itemCarregador img {
+    height: 120px;
+    width: 120px;
+}
+
+.PageCarregador main .itemCarregador p {
+    font-size: medium;
+    margin-bottom: 15px;
+}
+
+.PageCarregador main .itemCarregador h1 {
+    font-size: medium;
+    margin-top: 15px;
+}
+.PageCarregador main .itemCarregador button {
+    background-color: #01c929;
+    color: #fff;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    margin-top: 10px;
+}

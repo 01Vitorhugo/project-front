@@ -1,0 +1,83 @@
+.novidades .title {
+    width: auto;
+    height: auto;
+    margin-top: 34px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 18px;
+    color: #ffff;
+}
+.novidades section {
+    height: 240px;
+    width: 100%;
+    margin-top: 25px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+
+    display: grid;
+    width: 100%;
+    grid-auto-flow: column;
+    gap: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+    
+
+
+}
+
+section .conteudo {
+    height: 90%;
+    width: 125px;
+    background: rgba(36, 36, 36, 0.64); 
+    box-shadow: 0px 4px 100px 0px #000 inset;
+    border-radius: 10px;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.conteudo figure {
+    height: 60%;
+    width: 100%;
+    background: rgba(36, 36, 36, 0.64);
+    box-shadow: 0px 4px 100px 0px #000 inset;
+    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo figure img {
+    max-height: 110px;
+    max-width: 100%;
+}
+.conteudo  i{
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    color: white;
+}
+.conteudo h2{
+    font-size: smaller;
+    margin-top: 10px;
+}
+.conteudo .inspecionar{
+    margin-top: 20px;
+    background: rgba(190, 21, 34, 0.75);
+    color: #ffff;
+    border-radius: 15px;
+
+    width: 80%;
+    height: 30px
+
+}
+.conteudo .inspecionar a{
+    font-size: small;
+}

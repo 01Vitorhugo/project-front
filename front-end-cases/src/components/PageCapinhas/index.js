@@ -5,7 +5,7 @@ import './pageCapinhas.css';
 
 export default function PageCapinhas() {
 
-    const { capinhas, compra, setCompra, log } = useContext(StateContext);
+    const { capinhas, compra, setCompra} = useContext(StateContext);
     const [pesquisa, setPesquisa] = useState('');
 
     const elemento = capinhas.filter((item) => item.modelo === pesquisa)
@@ -28,16 +28,11 @@ export default function PageCapinhas() {
         let objCompra = item;
         localStorage.setItem("itemCompra", JSON.stringify(objCompra));
 
-        if (compra === true && log === true) {
+        if (compra === true ) {
             window.location.href = "/finalizarCompra";
 
 
-        } else if (compra === false && log === false) {
-            window.location.href = "/login";
-
-        }
-
-
+        } 
 
     }
 

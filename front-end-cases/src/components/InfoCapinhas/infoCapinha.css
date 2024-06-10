@@ -129,23 +129,4 @@ section .boxInfoNovidade button {
 
 
 }
-.infoCapinha .title {
-    width: auto;
-    height: auto;
-    margin-top: 34px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-left: 18px;
-    color: #ffff;
-}
-.infoCapinha .title h1 {
-    font-size: larger;
-
-}
-
-.infoCapinha .title svg {
-    margin-left: 13px;
-    margin-top: 3px;
-}
 
