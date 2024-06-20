@@ -1,0 +1,32 @@
+@media (min-width: 700px){
+    .novidades section{
+        height: auto !important;
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 5px !important;
+    }
+
+    .conteudo{
+        width: 220px !important;
+        height: 300px !important;
+
+
+    }
+}
+@media (min-width: 1000px){
+    .novidades section{
+        height: auto !important;
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 10px !important;
+    }
+
+    .conteudo{
+        width: 220px !important;
+        height: 300px !important;
+
+
+    }
+}

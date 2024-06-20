@@ -1,5 +1,5 @@
 import React from "react";
-import {  useState } from 'react';
+import { useState } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
 
@@ -18,12 +18,9 @@ function NavPage() {
     }
 
 
-
-
     return (
         <div className="nav">
             <div className='icon-menu'>
-
 
                 {nav === false ?
                     <button onClick={NavInfo}>
@@ -46,9 +43,6 @@ function NavPage() {
                             <div className='logo-nav'>
                                 <button onClick={VoltaNav}> <Link to='/'><img src={require('../../Imagens/logo.png')} alt='logo' /></Link></button>
                             </div>
-
-
-
                         </div>
 
                         <div className='topics'>
@@ -56,7 +50,6 @@ function NavPage() {
 
                                 <li><Link to='/carregadores'>Carregadores</Link></li>
                                 <li><Link to='/capinhas'>Capinhas</Link></li>
-                                <li>Cabos</li>
                                 <li>Película</li>
                             </ul>
 

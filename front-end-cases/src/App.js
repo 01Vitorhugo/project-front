@@ -10,11 +10,9 @@ import { animateScroll as scroll } from 'react-scroll';
 
 
 
-
 function App() {
 
   const [setaScroll, setSetaScrollY] = useState(0);
-
 
 
   function getScroll() {

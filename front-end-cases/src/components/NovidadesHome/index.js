@@ -1,5 +1,6 @@
 import React from "react";
 import './novidades.css';
+import './novidadesMediaQuery.css';
 import { StateContext } from '../../ContextApi/states';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom'

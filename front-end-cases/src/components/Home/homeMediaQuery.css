@@ -1,0 +1,37 @@
+
+@media (min-width: 500px){
+    .banner-home{
+        height: 300px !important;
+    }
+   
+    
+}
+@media (min-width: 580px){
+    .banner-home{
+        height: 400px !important;
+    }
+   
+    
+}
+@media (min-width: 900px){
+    .banner-home{
+        height: 500px !important;
+    }
+   
+    
+}
+
+@media (min-width: 1200px){
+    .banner-home{
+        height: 600px !important;
+    }
+   
+    
+}
+@media (min-width: 1600px){
+    .banner-home{
+        height: 700px !important;
+    }
+   
+    
+}

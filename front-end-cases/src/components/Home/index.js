@@ -1,5 +1,6 @@
 import React from "react";
 import './home.css';
+import './homeMediaQuery.css';
 import { Carousel } from 'flowbite-react';
 import NovidadesHome from '../NovidadesHome';
 import ProdutosHome from "../ProdutosHome";
@@ -7,7 +8,6 @@ import ProdutosHome from "../ProdutosHome";
 
 
 function HomePage() {
-
 
     return (
         <div className="home">

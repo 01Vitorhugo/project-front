@@ -8,23 +8,20 @@ import { StateContext } from '../../ContextApi/states';
 function Carrinho() {
 
     const { log, compra, setCompra } = useContext(StateContext);
-
     const [pushItem, setPushItem] = useState([]);
 
-    
 
     useEffect(() => {
-        
+
         Atualizar();
+        
     }, [])
 
     function Atualizar() {
 
         const item = localStorage.getItem("favoritos")
         var itemConvertido = JSON.parse(item)
-
         setPushItem(itemConvertido);
-
     }
 
     function excluir(item) {
@@ -34,13 +31,9 @@ function Carrinho() {
         });
 
         pushItem.splice(i, 1);
-
         localStorage.setItem("favoritos", JSON.stringify(pushItem));
-
         Atualizar();
-
         toast.success("Excluido com sucesso");
-
     }
 
     function Compra(item) {
@@ -48,20 +41,16 @@ function Carrinho() {
 
         let objCompra = item;
         localStorage.setItem("itemCompra", JSON.stringify(objCompra));
-       
-        if (compra === true && log === true) {   
+
+        if (compra === true && log === true) {
             window.location.href = "/finalizarCompra";
-            
 
-        }else if(compra === false && log === false) {
+
+        } else if (compra === false && log === false) {
             window.location.href = "/login";
-            
+
         }
-
     }
-
-
-
 
     return (
 
@@ -98,7 +87,6 @@ function Carrinho() {
 
         </div>
     )
-
 
 }
 

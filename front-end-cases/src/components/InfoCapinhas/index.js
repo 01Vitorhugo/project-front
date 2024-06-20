@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 function InfoCapinha() {
 
-    const { itemCapinhaInfo, setItemCapinhaInfo, apiParaVoce, produtos} = useContext(StateContext);
+    const { itemCapinhaInfo, setItemCapinhaInfo, apiParaVoce, produtos } = useContext(StateContext);
     const [car, setCar] = useState(false);
 
 
@@ -22,7 +22,7 @@ function InfoCapinha() {
         let itemSalvos = JSON.parse(lista) || [];
 
         itemSalvos.push(item);
-       
+
         localStorage.setItem("favoritos", JSON.stringify(itemSalvos));
 
 
@@ -32,14 +32,13 @@ function InfoCapinha() {
         toast.success("Adicionado ao carrinho");
     }
 
-    
     return (
         <div className="infoCapinha">
 
             {
                 itemCapinhaInfo.map((item) => {
-                    return(
-                        <div className='boxInfo'   key={item.id}>
+                    return (
+                        <div className='boxInfo' key={item.id}>
                             <div className='carrinhoProduto'>
 
                                 <button onClick={() => favorito(item)} >
@@ -71,7 +70,7 @@ function InfoCapinha() {
                 })
 
             }
-            
+
 
 
             <article><h1>Sugestões para você</h1></article>
